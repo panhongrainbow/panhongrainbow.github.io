@@ -1,0 +1,30 @@
+digraph G {
+    rankdir=TB;
+    node [shape=box];
+
+    LiHuaImageNode [label="", image="assets/Li-Hua.png", width=0.01, height=0.01];
+
+    tickerzImageNode [label="", image="assets/tickerz.png", width=0.01, height=0.01];
+    filebasezImageNode [label="", image="assets/filebasez.png", width=0.01, height=0.01];
+    projectImageNode [label="", image="assets/project.png", width=0.01, height=0.01];
+    designPatternsExplainedzImageNode [label="", image="assets/designPatternsExplainedz.png", width=0.01, height=0.01];
+
+    node [shape=record, fontname="Courier New"];
+    subgraph cluster_mongodb_pattern {
+        label="mongodb pattern";
+        node [style=filled, fillcolor=gray];
+        mongodbPatterns [label="{
+            <omitempty>omitempty(2023/4/8)|
+            <polymorphic>polymorphic(2023/4/1)|
+            <subset>subset(2023/4/10)
+            }", height=1];
+    }
+
+    
+    LiHuaImageNode -> tickerzImageNode [style=dashed];
+    LiHuaImageNode -> filebasezImageNode [style=dashed];
+    LiHuaImageNode -> projectImageNode [style=dashed];
+
+    LiHuaImageNode -> designPatternsExplainedzImageNode [style=dashed];
+    designPatternsExplainedzImageNode -> mongodbPatterns [style=dashed];
+}
