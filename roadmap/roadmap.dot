@@ -8,6 +8,9 @@ digraph G {
     filebasezImageNode [label="", image="assets/filebasez.png", width=0.01, height=0.01];
     projectImageNode [label="", image="assets/project.png", width=0.01, height=0.01];
     designPatternsExplainedzImageNode [label="", image="assets/designPatternsExplainedz.png", width=0.01, height=0.01];
+    algorithmExplainedzImageNode [label="", image="assets/algorithmExplainedz.png", width=0.01, height=0.01];
+    abstractionExplainedzImageNode [label="", image="assets/abstractionExplainedz.png", width=0.01, height=0.01];
+    debianExplainedzImageNode [label="", image="assets/debianExplainedz.png", width=0.01, height=0.01];
 
     // projectImageNode
     node [shape=record, fontname="Courier New"];
@@ -26,13 +29,25 @@ digraph G {
             }", height=1];
     }
 
+    subgraph cluster_filebasez {
+        label="filebasez";
+        node [style=filled, fillcolor=gray];
+        filebasezStack [label="{
+            <note20230327>create any shared memory segments(2023/3/27)|
+            <note20230329>release v0.0.1(2023/3/29)|
+            <note20230412>create a new data structure called speedy array(2023/4/12)|
+            <note20230413>release v0.0.2(2023/4/13)
+            }", height=1];
+    }
+
     subgraph cluster_problems_discovered {
         label="assemble project";
         node [style=filled, fillcolor=gray];
         assembleProjectStack [label="{
             <note20230406>first assembly of the machine(2023/4/6)|
             <note20230411>suspect that the tickerz serial number generator is not working properly(2023/4/11)|
-            <note202304111>upgrade tickerz v0.0.4(2023/4/11)
+            <note202304111>upgrade tickerz v0.0.4(2023/4/11)|
+            <note20230412>filebasez needs to improve its search function(2023/4/12)
             }", height=1];
     }
     
@@ -51,14 +66,21 @@ digraph G {
     LiHuaImageNode -> filebasezImageNode [penwidth=2];
     LiHuaImageNode -> projectImageNode [penwidth=2];
     LiHuaImageNode -> designPatternsExplainedzImageNode [penwidth=2];
+    LiHuaImageNode -> algorithmExplainedzImageNode [penwidth=2];
+    LiHuaImageNode -> abstractionExplainedzImageNode [penwidth=2];
+    LiHuaImageNode -> debianExplainedzImageNode [penwidth=2];
 
     tickerzImageNode -> tickerzStack [penwidth=2];
+    filebasezImageNode -> filebasezStack [penwidth=2];
 
     projectImageNode -> assembleProjectStack [penwidth=2];
     designPatternsExplainedzImageNode -> mongodbPatternStack [penwidth=2];
 
+    // history
+    assembleProjectStack:note20230411 -> tickerzStack:note20230411 [style=dashed, penwidth=1];
+    assembleProjectStack:note202304111 -> tickerzStack:note202304111 [style=dashed, penwidth=1];
+
     // daily work
-    LiHuaImageNode -> assembleProjectStack:note20230411 [style=dashed, penwidth=2, color=red];
-    assembleProjectStack:note20230411 -> tickerzStack:note20230411 [style=dashed, penwidth=2, color=purple];
-    assembleProjectStack:note202304111 -> tickerzStack:note202304111 [style=dashed, penwidth=2, color=purple];
+    LiHuaImageNode -> assembleProjectStack:note20230412 [style=dashed, penwidth=2, color=red];
+    assembleProjectStack:note20230412 -> filebasezStack:note20230412 [style=dashed, penwidth=2, color=purple];
 }
