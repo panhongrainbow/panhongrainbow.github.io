@@ -9,22 +9,56 @@ digraph G {
     projectImageNode [label="", image="assets/project.png", width=0.01, height=0.01];
     designPatternsExplainedzImageNode [label="", image="assets/designPatternsExplainedz.png", width=0.01, height=0.01];
 
+    // projectImageNode
     node [shape=record, fontname="Courier New"];
+
+    // the mongodb pattern of the designPatternsExplainedz
+    node [shape=record, fontname="Courier New"];
+
+    subgraph cluster_tickerz {
+        label="tickerz";
+        node [style=filled, fillcolor=gray];
+        tickerzStack [label="{
+            <note20230404>base refactors the code and adds new comments(2023/4/4)|
+            <note20230407>base splits the CheckOpts function into smaller functions(2023/4/7)|
+            <note20230411>enhance the functionality of the serial number generator(2023/4/11)|
+            <note202304111>release v0.0.4(2023/4/11)
+            }", height=1];
+    }
+
+    subgraph cluster_problems_discovered {
+        label="assemble project";
+        node [style=filled, fillcolor=gray];
+        assembleProjectStack [label="{
+            <note20230406>first assembly of the machine(2023/4/6)|
+            <note20230411>suspect that the tickerz serial number generator is not working properly(2023/4/11)|
+            <note202304111>upgrade tickerz v0.0.4(2023/4/11)
+            }", height=1];
+    }
+    
     subgraph cluster_mongodb_pattern {
         label="mongodb pattern";
         node [style=filled, fillcolor=gray];
-        mongodbPatterns [label="{
+        mongodbPatternStack [label="{
             <omitempty>omitempty(2023/4/8)|
             <polymorphic>polymorphic(2023/4/1)|
             <subset>subset(2023/4/10)
             }", height=1];
     }
 
-    
-    LiHuaImageNode -> tickerzImageNode [style=dashed];
-    LiHuaImageNode -> filebasezImageNode [style=dashed];
-    LiHuaImageNode -> projectImageNode [style=dashed];
+    // image nodes
+    LiHuaImageNode -> tickerzImageNode [penwidth=2];
+    LiHuaImageNode -> filebasezImageNode [penwidth=2];
+    LiHuaImageNode -> projectImageNode [penwidth=2];
+    LiHuaImageNode -> designPatternsExplainedzImageNode [penwidth=2];
 
-    LiHuaImageNode -> designPatternsExplainedzImageNode [style=dashed];
-    designPatternsExplainedzImageNode -> mongodbPatterns [style=dashed];
+    tickerzImageNode -> tickerzStack [penwidth=2];
+
+    projectImageNode -> assembleProjectStack [penwidth=2];
+    designPatternsExplainedzImageNode -> mongodbPatternStack [penwidth=2];
+
+    // daily work
+    LiHuaImageNode -> assembleProjectStack:note20230411 [style=dashed, penwidth=2, color=red];
+    assembleProjectStack:note20230411 -> tickerzStack:note20230411 [style=dashed, penwidth=2, color=purple];
+    assembleProjectStack:note202304111 -> tickerzStack:note202304111 [style=dashed, penwidth=2, color=purple];
 }
