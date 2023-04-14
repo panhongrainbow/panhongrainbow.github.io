@@ -13,6 +13,8 @@ digraph G {
     golangExplainedzImageNode [label="", image="assets/golangExplainedz.png", width=0.01, height=0.01];
     girlImageNode [label="", image="assets/debianGirl.png", width=0.01, height=0.01];
     economyExplainedzImageNode [label="", image="assets/economyExplainedz.png", width=0.01, height=0.01];
+    toolsExplainedzImageNode [label="", image="assets/toolsExplainedz.png", width=0.01, height=0.01];
+    astrologyExplainedzImageNode [label="", image="assets/astrologyExplainedz.png", width=0.01, height=0.01];
 
     // projectImageNode
     node [shape=record, fontname="Courier New"];
@@ -39,7 +41,8 @@ digraph G {
             <note20230329>release v0.0.1(2023/3/29)|
             <note20230412>create a new data structure called speedy array(2023/4/12)|
             <note20230413>finish a draft of speedyArray(2023/4/13)|
-            <note20230414>release v0.0.2(2023/4/14)
+            <note20230414>annotate all the speedyarray code(2023/4/14)|
+            <note20230415>release v0.0.2(2023/4/15)
             }", height=1];
     }
 
@@ -69,7 +72,8 @@ digraph G {
         node [style=filled, fillcolor=gray];
         golangExplainStack [label="{
             <note20230411>explain what heap arena is(2023/4/11)|
-            <note20230413>implement a fake interface(2023/4/13)
+            <note20230413>implement a fake interface(2023/4/13)|
+            <note20230414>explain what bitmap is(2023/4/14)
             }", height=1];
     }
 
@@ -85,6 +89,8 @@ digraph G {
 
     // ohter images
     girlImageNode -> economyExplainedzImageNode [penwidth=2];
+    girlImageNode -> toolsExplainedzImageNode [penwidth=2];
+    girlImageNode -> astrologyExplainedzImageNode [penwidth=2];
 
     tickerzImageNode -> tickerzStack [penwidth=2];
     filebasezImageNode -> filebasezStack [penwidth=2];
@@ -95,10 +101,10 @@ digraph G {
     // history
     assembleProjectStack:note20230411 -> tickerzStack:note20230411 [style=dashed, penwidth=1];
     assembleProjectStack:note202304111 -> tickerzStack:note202304111 [style=dashed, penwidth=1];
+    assembleProjectStack:note20230412 -> filebasezStack:note20230412 [style=dashed, penwidth=2];
 
     // daily work
-    LiHuaImageNode -> filebasezStack:note20230413 [penwidth=2, color=red];
-    assembleProjectStack:note20230412 -> filebasezStack:note20230412 [style=dashed, penwidth=2];
+    LiHuaImageNode -> filebasezStack:note20230414 [penwidth=2, color=red];
 
     // others
 }
