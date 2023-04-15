@@ -67,6 +67,14 @@ digraph G {
             }", height=1];
     }
 
+    subgraph cluster_abstraction_explain {
+    label="abstractionExplainedz";
+    node [style=filled, fillcolor=gray];
+    abstractionExplainStack [label="{
+            <note20230415>test the normal distribution of statistics(2023/4/15)
+            }", height=1];
+    }
+
     subgraph cluster_golang_explain {
         label="golangExplainedz";
         node [style=filled, fillcolor=gray];
@@ -96,6 +104,7 @@ digraph G {
     filebasezImageNode -> filebasezStack [penwidth=2];
     projectImageNode -> assembleProjectStack [penwidth=2];
     designPatternsExplainedzImageNode -> mongodbPatternStack [penwidth=2];
+    abstractionExplainedzImageNode -> abstractionExplainStack [penwidth=2];
     golangExplainedzImageNode -> golangExplainStack [penwidth=2];
 
     // history
@@ -104,7 +113,7 @@ digraph G {
     assembleProjectStack:note20230412 -> filebasezStack:note20230412 [style=dashed, penwidth=2];
 
     // daily work
-    LiHuaImageNode -> filebasezStack:note20230414 [penwidth=2, color=red];
+    LiHuaImageNode -> abstractionExplainStack:note20230415 [penwidth=2, color=red];
 
     // others
 }
