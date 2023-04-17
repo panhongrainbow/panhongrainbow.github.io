@@ -9,8 +9,9 @@ digraph G {
     projectImageNode [label="", image="assets/project.png", width=0.01, height=0.01];
     designPatternsExplainedzImageNode [label="", image="assets/designPatternsExplainedz.png", width=0.01, height=0.01];
     algorithmExplainedzImageNode [label="", image="assets/algorithmExplainedz.png", width=0.01, height=0.01];
-    abstractionExplainedzImageNode [label="", image="assets/abstractionExplainedz.png", width=0.01, height=0.01];
     golangExplainedzImageNode [label="", image="assets/golangExplainedz.png", width=0.01, height=0.01];
+    netInsightsExplainedzImageNode [label="", image="assets/netInsightsExplainedz.png", width=0.01, height=0.01];
+    abstractionExplainedzImageNode [label="", image="assets/abstractionExplainedz.png", width=0.01, height=0.01];
     girlImageNode [label="", image="assets/debianGirl.png", width=0.01, height=0.01];
     economyExplainedzImageNode [label="", image="assets/economyExplainedz.png", width=0.01, height=0.01];
     toolsExplainedzImageNode [label="", image="assets/toolsExplainedz.png", width=0.01, height=0.01];
@@ -54,7 +55,8 @@ digraph G {
             <note20230411>suspect that the tickerz serial number generator is not working properly(2023/4/11)|
             <note202304111>upgrade tickerz v0.0.4(2023/4/11)|
             <note20230412>filebasez needs to improve its search function(2023/4/12)|
-            <note20230416>upgrade filebasez v0.0.3(2023/4/16)
+            <note20230416>upgrade filebasez v0.0.3(2023/4/16)|
+            <note20230417>deploy code on a test machine(2023/4/17)
             }", height=1];
     }
     
@@ -68,14 +70,6 @@ digraph G {
             }", height=1];
     }
 
-    subgraph cluster_abstraction_explain {
-    label="abstractionExplainedz";
-    node [style=filled, fillcolor=gray];
-    abstractionExplainStack [label="{
-            <note20230415>test the normal distribution of statistics(2023/4/15)
-            }", height=1];
-    }
-
     subgraph cluster_golang_explain {
         label="golangExplainedz";
         node [style=filled, fillcolor=gray];
@@ -83,6 +77,23 @@ digraph G {
             <note20230411>explain what heap arena is(2023/4/11)|
             <note20230413>implement a fake interface(2023/4/13)|
             <note20230414>explain what bitmap is(2023/4/14)
+            }", height=1];
+    }
+
+    subgraph cluster_netInsights_explain {
+    label="netInsightsExplainedzExplainedz";
+    node [style=filled, fillcolor=gray];
+    netInsightsExplainStack [label="{
+            <note20230416>discuss the interaction between C language and Golang net functions(2023/4/16)|
+            <note20230417>use strace to trace the socket function to find the link to glibc(2023/4/17)
+            }", height=1];
+    }
+
+    subgraph cluster_abstraction_explain {
+    label="abstractionExplainedz";
+    node [style=filled, fillcolor=gray];
+    abstractionExplainStack [label="{
+            <note20230415>test the normal distribution of statistics(2023/4/15)
             }", height=1];
     }
 
@@ -94,6 +105,7 @@ digraph G {
     LiHuaImageNode -> algorithmExplainedzImageNode [penwidth=2];
     LiHuaImageNode -> abstractionExplainedzImageNode [penwidth=2];
     LiHuaImageNode -> golangExplainedzImageNode [penwidth=2];
+    LiHuaImageNode -> netInsightsExplainedzImageNode [penwidth=2];
     LiHuaImageNode -> girlImageNode [penwidth=2];
 
     // ohter images
@@ -101,12 +113,14 @@ digraph G {
     girlImageNode -> toolsExplainedzImageNode [penwidth=2];
     girlImageNode -> astrologyExplainedzImageNode [penwidth=2];
 
+    // stack nodes
     tickerzImageNode -> tickerzStack [penwidth=2];
     filebasezImageNode -> filebasezStack [penwidth=2];
     projectImageNode -> assembleProjectStack [penwidth=2];
     designPatternsExplainedzImageNode -> mongodbPatternStack [penwidth=2];
-    abstractionExplainedzImageNode -> abstractionExplainStack [penwidth=2];
     golangExplainedzImageNode -> golangExplainStack [penwidth=2];
+    netInsightsExplainedzImageNode -> netInsightsExplainStack [penwidth=2];
+    abstractionExplainedzImageNode -> abstractionExplainStack [penwidth=2];
 
     // history
     assembleProjectStack:note20230411 -> tickerzStack:note20230411 [style=dashed, penwidth=1];
@@ -114,7 +128,8 @@ digraph G {
     assembleProjectStack:note20230412 -> filebasezStack:note20230412 [style=dashed, penwidth=2];
 
     // daily work
-    LiHuaImageNode -> assembleProjectStack:note20230416 [penwidth=2, color=red];
+    LiHuaImageNode -> assembleProjectStack:note20230417 [penwidth=2, color=red];
+    assembleProjectStack:note20230417 -> netInsightsExplainStack:note20230417 [style=dashed, penwidth=2 color=purple];
 
     // others
 }
