@@ -6,6 +6,7 @@ digraph G {
 
     tickerzImageNode [label="", image="assets/tickerz.png", width=0.01, height=0.01];
     filebasezImageNode [label="", image="assets/filebasez.png", width=0.01, height=0.01];
+    tracezImageNode [label="", image="assets/tracez.png", width=0.01, height=0.01];
     projectImageNode [label="", image="assets/project.png", width=0.01, height=0.01];
     designPatternsExplainedzImageNode [label="", image="assets/designPatternsExplainedz.png", width=0.01, height=0.01];
     algorithmExplainedzImageNode [label="", image="assets/algorithmExplainedz.png", width=0.01, height=0.01];
@@ -15,6 +16,7 @@ digraph G {
     girlImageNode [label="", image="assets/debianGirl.png", width=0.01, height=0.01];
     economyExplainedzImageNode [label="", image="assets/economyExplainedz.png", width=0.01, height=0.01];
     toolsExplainedzImageNode [label="", image="assets/toolsExplainedz.png", width=0.01, height=0.01];
+    languageExplainedzImageNode [label="", image="assets/languageExplainedz.png", width=0.01, height=0.01];
     astrologyExplainedzImageNode [label="", image="assets/astrologyExplainedz.png", width=0.01, height=0.01];
 
     // projectImageNode
@@ -44,6 +46,14 @@ digraph G {
             <note20230413>finish a draft of speedyArray(2023/4/13)|
             <note20230415>annotate all the speedyarray code(2023/4/15)|
             <note20230416>release v0.0.3(2023/4/16)
+            }", height=1];
+    }
+
+    subgraph cluster_tracez {
+    label="tracez";
+    node [style=filled, fillcolor=gray];
+    tracezStack [label="{
+            <note20230418>design the architecture of open telemetry(2023/4/18)
             }", height=1];
     }
 
@@ -100,6 +110,7 @@ digraph G {
     // image nodes
     LiHuaImageNode -> tickerzImageNode [penwidth=2];
     LiHuaImageNode -> filebasezImageNode [penwidth=2];
+    LiHuaImageNode -> tracezImageNode [penwidth=2];
     LiHuaImageNode -> projectImageNode [penwidth=2];
     LiHuaImageNode -> designPatternsExplainedzImageNode [penwidth=2];
     LiHuaImageNode -> algorithmExplainedzImageNode [penwidth=2];
@@ -111,11 +122,13 @@ digraph G {
     // ohter images
     girlImageNode -> economyExplainedzImageNode [penwidth=2];
     girlImageNode -> toolsExplainedzImageNode [penwidth=2];
+    girlImageNode -> languageExplainedzImageNode [penwidth=2];
     girlImageNode -> astrologyExplainedzImageNode [penwidth=2];
 
     // stack nodes
     tickerzImageNode -> tickerzStack [penwidth=2];
     filebasezImageNode -> filebasezStack [penwidth=2];
+    tracezImageNode -> tracezStack [penwidth=2];
     projectImageNode -> assembleProjectStack [penwidth=2];
     designPatternsExplainedzImageNode -> mongodbPatternStack [penwidth=2];
     golangExplainedzImageNode -> golangExplainStack [penwidth=2];
@@ -123,13 +136,13 @@ digraph G {
     abstractionExplainedzImageNode -> abstractionExplainStack [penwidth=2];
 
     // history
-    assembleProjectStack:note20230411 -> tickerzStack:note20230411 [style=dashed, penwidth=1];
-    assembleProjectStack:note202304111 -> tickerzStack:note202304111 [style=dashed, penwidth=1];
+    assembleProjectStack:note20230411 -> tickerzStack:note20230411 [style=dashed, penwidth=2];
+    assembleProjectStack:note202304111 -> tickerzStack:note202304111 [style=dashed, penwidth=2];
     assembleProjectStack:note20230412 -> filebasezStack:note20230412 [style=dashed, penwidth=2];
+    assembleProjectStack:note20230417 -> netInsightsExplainStack:note20230417 [style=dashed, penwidth=2];
 
     // daily work
-    LiHuaImageNode -> assembleProjectStack:note20230417 [penwidth=2, color=red];
-    assembleProjectStack:note20230417 -> netInsightsExplainStack:note20230417 [style=dashed, penwidth=2 color=purple];
+    LiHuaImageNode -> tracezStack:note20230418 [penwidth=2, color=red];
 
     // others
 }
