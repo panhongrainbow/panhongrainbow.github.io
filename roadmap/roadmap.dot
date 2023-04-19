@@ -80,6 +80,16 @@ digraph G {
             }", height=1];
     }
 
+    subgraph cluster_algorithm_explain {
+    label="algorithmExplainedz";
+    node [style=filled, fillcolor=gray];
+    algorithmExplainStack [label="{
+            <note20230324>finds the maximum subarray sum of a given array(2023/3/24)|
+            <note20230403>divide an array into three sections based on a pivot value called partition process(2023/4/3)|
+            <note20230419>make the visualiation of trieTree algorithm(2023/4/19)
+            }", height=1];
+    }
+
     subgraph cluster_golang_explain {
         label="golangExplainedz";
         node [style=filled, fillcolor=gray];
@@ -131,6 +141,7 @@ digraph G {
     tracezImageNode -> tracezStack [penwidth=2];
     projectImageNode -> assembleProjectStack [penwidth=2];
     designPatternsExplainedzImageNode -> mongodbPatternStack [penwidth=2];
+    algorithmExplainedzImageNode -> algorithmExplainStack [penwidth=2];
     golangExplainedzImageNode -> golangExplainStack [penwidth=2];
     netInsightsExplainedzImageNode -> netInsightsExplainStack [penwidth=2];
     abstractionExplainedzImageNode -> abstractionExplainStack [penwidth=2];
@@ -142,7 +153,7 @@ digraph G {
     assembleProjectStack:note20230417 -> netInsightsExplainStack:note20230417 [style=dashed, penwidth=2];
 
     // daily work
-    LiHuaImageNode -> tracezStack:note20230418 [penwidth=2, color=red];
+    LiHuaImageNode -> algorithmExplainStack:note20230419 [penwidth=2, color=red];
 
     // others
 }
