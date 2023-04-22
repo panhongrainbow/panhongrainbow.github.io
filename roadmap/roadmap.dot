@@ -27,7 +27,9 @@ digraph G {
 
     subgraph cluster_tickerz {
         label="tickerz";
-        node [style=filled, fillcolor=gray];
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
         tickerzStack [label="{
             <note20230404>base refactors the code and adds new comments(2023/4/4)|
             <note20230407>base splits the CheckOpts function into smaller functions(2023/4/7)|
@@ -38,7 +40,9 @@ digraph G {
 
     subgraph cluster_filebasez {
         label="filebasez";
-        node [style=filled, fillcolor=gray];
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
         filebasezStack [label="{
             <note20230327>create any shared memory segments(2023/3/27)|
             <note20230329>release v0.0.1(2023/3/29)|
@@ -50,16 +54,20 @@ digraph G {
     }
 
     subgraph cluster_tracez {
-    label="tracez";
-    node [style=filled, fillcolor=gray];
-    tracezStack [label="{
+        label="tracez";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        tracezStack [label="{
             <note20230418>design the architecture of open telemetry(2023/4/18)
             }", height=1];
     }
 
     subgraph cluster_problems_discovered {
         label="assemble project";
-        node [style=filled, fillcolor=gray];
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
         assembleProjectStack [label="{
             <note20230406>first assembly of the machine(2023/4/6)|
             <note20230411>suspect that the tickerz serial number generator is not working properly(2023/4/11)|
@@ -72,7 +80,9 @@ digraph G {
     
     subgraph cluster_mongodb_pattern {
         label="mongodb pattern";
-        node [style=filled, fillcolor=gray];
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
         mongodbPatternStack [label="{
             <omitempty>omitempty(2023/4/8)|
             <polymorphic>polymorphic(2023/4/1)|
@@ -81,42 +91,66 @@ digraph G {
     }
 
     subgraph cluster_algorithm_explain {
-    label="algorithmExplainedz";
-    node [style=filled, fillcolor=gray];
-    algorithmExplainStack [label="{
+        label="algorithmExplainedz";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        algorithmExplainStack [label="{
             <note20230324>finds the maximum subarray sum of a given array(2023/3/24)|
             <note20230403>divide an array into three sections based on a pivot value called partition process(2023/4/3)|
             <note20230419>make the visualiation of trieTree algorithm(2023/4/19)
             }", height=1];
     }
 
+    // golangExplainStack
     subgraph cluster_golang_explain {
+        style=rounded;
+        penwidth=2;
         label="golangExplainedz";
-        node [style=filled, fillcolor=gray];
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
         golangExplainStack [label="{
             <note20230411>explain what heap arena is(2023/4/11)|
             <note20230413>implement a fake interface(2023/4/13)|
             <note20230414>explain what bitmap is(2023/4/14)|
             <note20230419>prevent data race in multi-core environment(2023/4/19)|
             <note20230420>explain some complicated examples about data race(2023/4/20)|
-            <note20230421>understand memory barriers and use objdump to find memory barriers(2023/4/21)
+            <note20230421>memory barrier(2023/4/21)
+            }", height=1];
+        memoryBarrieStack [label="{
+            <note20230421>understand memory barriers and use objdump to find memory barriers(2023/4/21)|
+            <note20230422>confirm that the channel uses memory barriers(2023/4/22)
             }", height=1];
     }
 
+    // netInsightsExplainStack
     subgraph cluster_netInsights_explain {
-    label="netInsightsExplainedzExplainedz";
-    node [style=filled, fillcolor=gray];
-    netInsightsExplainStack [label="{
+        label="netInsightsExplainedzExplainedz";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        netInsightsExplainStack [label="{
             <note20230416>discuss the interaction between C language and Golang net functions(2023/4/16)|
             <note20230417>use strace to trace the socket function to find the link to glibc(2023/4/17)
             }", height=1];
     }
 
     subgraph cluster_abstraction_explain {
-    label="abstractionExplainedz";
-    node [style=filled, fillcolor=gray];
-    abstractionExplainStack [label="{
+        label="abstractionExplainedz";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        abstractionExplainStack [label="{
             <note20230415>test the normal distribution of statistics(2023/4/15)
+            }", height=1];
+    }
+
+    subgraph cluster_tools_explain {
+        label="toolsExplainedz";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        toolsExplainStack [label="{
+            <note20230422>explain how to use alternative to update the golang compiler(2023/4/22)
             }", height=1];
     }
 
@@ -148,6 +182,10 @@ digraph G {
     golangExplainedzImageNode -> golangExplainStack [penwidth=2];
     netInsightsExplainedzImageNode -> netInsightsExplainStack [penwidth=2];
     abstractionExplainedzImageNode -> abstractionExplainStack [penwidth=2];
+    toolsExplainedzImageNode -> toolsExplainStack [penwidth=2];
+
+    // sub stack nodes
+    golangExplainStack:note20230421 -> memoryBarrieStack [penwidth=2];
 
     // history
     assembleProjectStack:note20230411 -> tickerzStack:note20230411 [style=dashed, penwidth=2];
@@ -156,7 +194,7 @@ digraph G {
     assembleProjectStack:note20230417 -> netInsightsExplainStack:note20230417 [style=dashed, penwidth=2];
 
     // daily work
-    LiHuaImageNode -> golangExplainStack:note20230421 [penwidth=2, color=red];
+    LiHuaImageNode -> memoryBarrieStack:note20230422 [penwidth=2, color=red];
 
     // others
 }
