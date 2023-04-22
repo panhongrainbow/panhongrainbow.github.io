@@ -98,7 +98,8 @@ digraph G {
             <note20230413>implement a fake interface(2023/4/13)|
             <note20230414>explain what bitmap is(2023/4/14)|
             <note20230419>prevent data race in multi-core environment(2023/4/19)|
-            <note20230420>explain some complicated examples about data race(2023/4/20)
+            <note20230420>explain some complicated examples about data race(2023/4/20)|
+            <note20230421>understand memory barriers and use objdump to find memory barriers(2023/4/21)
             }", height=1];
     }
 
@@ -155,7 +156,7 @@ digraph G {
     assembleProjectStack:note20230417 -> netInsightsExplainStack:note20230417 [style=dashed, penwidth=2];
 
     // daily work
-    LiHuaImageNode -> golangExplainStack:note20230420 [penwidth=2, color=red];
+    LiHuaImageNode -> golangExplainStack:note20230421 [penwidth=2, color=red];
 
     // others
 }
