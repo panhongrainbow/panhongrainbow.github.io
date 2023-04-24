@@ -113,14 +113,26 @@ digraph G {
             <note20230413>implement a fake interface(2023/4/13)|
             <note20230414>explain what bitmap is(2023/4/14)|
             <note20230419>prevent data race in multi-core environment(2023/4/19)|
-            <note20230420>explain some complicated examples about data race(2023/4/20)|
+            <note20230420>complicated of about data race(2023/4/20)|
+            <note202304201>basic examples of data race(2023/4/20)|
             <note20230421>memory barrier(2023/4/21)
             }", height=1];
         memoryBarrieStack [label="{
             <note20230421>understand memory barriers and use objdump to find memory barriers(2023/4/21)|
             <note20230422>confirm that the channel uses memory barriers(2023/4/22)
             }", height=1];
+        dataRaceBasicRulesStack [label="{
+            <note20230420>go routine race examples(2023/4/20)
+            }", height=1];
+        dataRaceComplicatedRulesStack [label="{
+            <note20230420>select race examples(2023/4/20)
+            }", height=1];
     }
+
+    // golangExplainStack inside
+    golangExplainStack:note20230420 -> dataRaceBasicRulesStack [penwidth=2];
+    golangExplainStack:note202304201 -> dataRaceComplicatedRulesStack [penwidth=2];
+    golangExplainStack:note20230421 -> memoryBarrieStack [penwidth=2];
 
     // netInsightsExplainStack
     subgraph cluster_netInsights_explain {
@@ -140,7 +152,9 @@ digraph G {
         penwidth=2;
         node [style=filled, penwidth=2, fillcolor="#FFFF77"];
         abstractionExplainStack [label="{
-            <note20230415>test the normal distribution of statistics(2023/4/15)
+            <note20230415>test the normal distribution of statistics(2023/4/15)|
+            <note20230423>use a less realistic pinball game to simulate a normal distribution(2023/4/23)|
+            <note20230430>use a more realistic pinball game to simulate a normal distribution(2023/4/30)
             }", height=1];
     }
 
@@ -184,9 +198,6 @@ digraph G {
     abstractionExplainedzImageNode -> abstractionExplainStack [penwidth=2];
     toolsExplainedzImageNode -> toolsExplainStack [penwidth=2];
 
-    // sub stack nodes
-    golangExplainStack:note20230421 -> memoryBarrieStack [penwidth=2];
-
     // history
     assembleProjectStack:note20230411 -> tickerzStack:note20230411 [style=dashed, penwidth=2];
     assembleProjectStack:note202304111 -> tickerzStack:note202304111 [style=dashed, penwidth=2];
@@ -194,7 +205,7 @@ digraph G {
     assembleProjectStack:note20230417 -> netInsightsExplainStack:note20230417 [style=dashed, penwidth=2];
 
     // daily work
-    LiHuaImageNode -> memoryBarrieStack:note20230422 [penwidth=2, color=red];
+    LiHuaImageNode -> abstractionExplainStack:note20230423 [penwidth=2, color=red];
 
     // others
 }
