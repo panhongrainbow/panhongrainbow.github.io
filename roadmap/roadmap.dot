@@ -4,6 +4,7 @@ digraph G {
 
     LiHuaImageNode [label="", image="assets/Li-Hua.png", width=0.01, height=0.01];
 
+    hinderzImageNode [label="", image="assets/hinderz.png", width=0.01, height=0.01];
     tickerzImageNode [label="", image="assets/tickerz.png", width=0.01, height=0.01];
     filebasezImageNode [label="", image="assets/filebasez.png", width=0.01, height=0.01];
     tracezImageNode [label="", image="assets/tracez.png", width=0.01, height=0.01];
@@ -24,6 +25,20 @@ digraph G {
 
     // the mongodb pattern of the designPatternsExplainedz
     node [shape=record, fontname="Courier New"];
+
+    subgraph cluster_hinderz {
+    label="hinderz";
+    style=rounded;
+    penwidth=2;
+    node [style=filled, penwidth=2, fillcolor="#c90076"];
+    hinderzStack [label="{
+            <note20230425>mongodb bucket pattern(2023/4/25)|
+            <note20230426>golang lock completed rules(2023/4/26)|
+            <note20230427>mongodb document pattern(2023/4/27)|
+            <note20230428>explain golang ServeHTTP component(2023/4/28)|
+            <note20230428>observe golang context switch(2023/4/29)
+            }", height=1];
+    }
 
     subgraph cluster_tickerz {
         label="tickerz";
@@ -86,9 +101,10 @@ digraph G {
         penwidth=2;
         node [style=filled, penwidth=2, fillcolor="#FFFF77"];
         mongodbPatternStack [label="{
-            <omitempty>omitempty(2023/4/8)|
-            <polymorphic>polymorphic(2023/4/1)|
-            <subset>subset(2023/4/10)
+            <note20230408>omitempty(2023/4/8)|
+            <note20230401>polymorphic(2023/4/1)|
+            <note20230410>subset(2023/4/10)|
+            <note20230426>bucket(2023/4/?)
             }", height=1];
     }
 
@@ -178,6 +194,7 @@ digraph G {
     }
 
     // image nodes
+    LiHuaImageNode -> hinderzImageNode [penwidth=2];
     LiHuaImageNode -> tickerzImageNode [penwidth=2];
     LiHuaImageNode -> filebasezImageNode [penwidth=2];
     LiHuaImageNode -> tracezImageNode [penwidth=2];
@@ -196,6 +213,7 @@ digraph G {
     girlImageNode -> astrologyExplainedzImageNode [penwidth=2];
 
     // stack nodes
+    hinderzImageNode -> hinderzStack [penwidth=2];
     tickerzImageNode -> tickerzStack [penwidth=2];
     filebasezImageNode -> filebasezStack [penwidth=2];
     tracezImageNode -> tracezStack [penwidth=2];
@@ -214,7 +232,7 @@ digraph G {
     assembleProjectStack:note20230417 -> netInsightsExplainStack:note20230417 [style=dashed, penwidth=2];
 
     // daily work
-    LiHuaImageNode -> tracezStack:note20230425 [penwidth=2, color=red];
+    LiHuaImageNode -> hinderzStack [penwidth=2, color=red];
 
     // others
 }
