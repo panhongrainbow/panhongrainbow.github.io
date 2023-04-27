@@ -1,24 +1,28 @@
 digraph G {
     rankdir=TB;
-    node [shape=box];
+    ranksep=2;
+    splines=ortho;
+    bgcolor="#f0e2e9";
 
-    LiHuaImageNode [label="", image="assets/Li-Hua.png", width=0.01, height=0.01];
+    node [shape=plaintext];
 
-    hinderzImageNode [label="", image="assets/hinderz.png", width=0.01, height=0.01];
-    tickerzImageNode [label="", image="assets/tickerz.png", width=0.01, height=0.01];
-    filebasezImageNode [label="", image="assets/filebasez.png", width=0.01, height=0.01];
-    tracezImageNode [label="", image="assets/tracez.png", width=0.01, height=0.01];
-    projectImageNode [label="", image="assets/project.png", width=0.01, height=0.01];
-    designPatternsExplainedzImageNode [label="", image="assets/designPatternsExplainedz.png", width=0.01, height=0.01];
-    algorithmExplainedzImageNode [label="", image="assets/algorithmExplainedz.png", width=0.01, height=0.01];
-    golangExplainedzImageNode [label="", image="assets/golangExplainedz.png", width=0.01, height=0.01];
-    netInsightsExplainedzImageNode [label="", image="assets/netInsightsExplainedz.png", width=0.01, height=0.01];
-    abstractionExplainedzImageNode [label="", image="assets/abstractionExplainedz.png", width=0.01, height=0.01];
-    girlImageNode [label="", image="assets/debianGirl.png", width=0.01, height=0.01];
-    economyExplainedzImageNode [label="", image="assets/economyExplainedz.png", width=0.01, height=0.01];
-    toolsExplainedzImageNode [label="", image="assets/toolsExplainedz.png", width=0.01, height=0.01];
-    languageExplainedzImageNode [label="", image="assets/languageExplainedz.png", width=0.01, height=0.01];
-    astrologyExplainedzImageNode [label="", image="assets/astrologyExplainedz.png", width=0.01, height=0.01];
+    LiHuaImageNode [label="<start>", image="assets/Li-Hua.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+
+    hinderzImageNode [label="<hinderz>", image="assets/hinderz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    tickerzImageNode [label="tickerz", image="assets/tickerz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    filebasezImageNode [label="<filebasez>", image="assets/filebasez.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    tracezImageNode [label="<tracez>", image="assets/tracez.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    projectImageNode [label="<project>", image="assets/project.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    designPatternsExplainedzImageNode [label="<designPatternsExplainedz>", image="assets/designPatternsExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    algorithmExplainedzImageNode [label="<algorithmExplainedz>", image="assets/algorithmExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    golangExplainedzImageNode [label="<golangExplainedz>", image="assets/golangExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    netInsightsExplainedzImageNode [label="<netInsightsExplainedz>", image="assets/netInsightsExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    abstractionExplainedzImageNode [label="<abstractionExplainedz>", image="assets/abstractionExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    girlImageNode [label="<debian>", image="assets/debianGirl.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    economyExplainedzImageNode [label="<economyExplainedz>", image="assets/economyExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    toolsExplainedzImageNode [label="<toolsExplainedz>", image="assets/toolsExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    languageExplainedzImageNode [label="<languageExplainedz>", image="assets/languageExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    astrologyExplainedzImageNode [label="<astrologyExplainedz>", image="assets/astrologyExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
 
     // projectImageNode
     node [shape=record, fontname="Courier New"];
@@ -33,7 +37,7 @@ digraph G {
     node [style=filled, penwidth=2, fillcolor="#c90076"];
     hinderzStack [label="{
             <note20230425>mongodb bucket pattern(2023/4/25)|
-            <note20230426>golang lock completed rules(2023/4/26)|
+            <note20230426>golang lock complicated rules(2023/4/26)|
             <note20230427>mongodb document pattern(2023/4/27)|
             <note20230428>explain golang ServeHTTP component(2023/4/28)|
             <note20230428>observe golang context switch(2023/4/29)
