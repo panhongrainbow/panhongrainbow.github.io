@@ -36,11 +36,10 @@ digraph G {
     penwidth=2;
     node [style=filled, penwidth=2, fillcolor="#c90076"];
     hinderzStack [label="{
-            <note20230425>mongodb bucket pattern(2023/4/25)|
             <note20230426>golang lock complicated rules(2023/4/26)|
             <note20230427>mongodb document pattern(2023/4/27)|
             <note20230428>explain golang ServeHTTP component(2023/4/28)|
-            <note20230428>observe golang context switch(2023/4/29)
+            <note20230429>observe golang context switch(2023/4/29)
             }", height=1];
     }
 
@@ -108,7 +107,7 @@ digraph G {
             <note20230408>omitempty(2023/4/8)|
             <note20230401>polymorphic(2023/4/1)|
             <note20230410>subset(2023/4/10)|
-            <note20230426>bucket(2023/4/?)
+            <note20230425>bucket(2023/4/25)
             }", height=1];
     }
 
@@ -237,6 +236,7 @@ digraph G {
 
     // daily work
     LiHuaImageNode -> hinderzStack [penwidth=2, color=red];
+    LiHuaImageNode -> mongodbPatternStack:note20230425 [penwidth=2, color=red];
 
     // others
 }
