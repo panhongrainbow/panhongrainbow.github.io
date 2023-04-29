@@ -2,7 +2,7 @@ digraph G {
     rankdir=TB;
     ranksep=2;
     splines=ortho;
-    bgcolor="#f0e2e9";
+    # bgcolor="#f0e2e9";
 
     node [shape=plaintext];
 
@@ -149,8 +149,8 @@ digraph G {
             <note202304242>Rule3: As long as the program contains malfunction sync mechanism(2023/4/24)|
             <note202304243>Rule4: As long as the program contains closure(2023/4/24)|
             <note202304244>Rule5: Reading and writing map or configuration information in multiple Goroutines(2023/4/24)|
-            <note202304245>Rule6: As long as the program accesses pointer variables(2023/4/?)|
-            <note202304246>Rule7: As long as the program accesses interface variables(2023/4/?)
+            <note20230426>Rule6: As long as the program accesses interface variables(2023/4/26)|
+            <note20230430>Rule7: When list is shared among multiple Goroutines(2023/4/30)
             }", height=1];
         dataRaceComplicatedRulesStack [label="{
             <note20230420>select race examples(2023/4/20)
@@ -236,7 +236,7 @@ digraph G {
 
     // daily work
     LiHuaImageNode -> hinderzStack [penwidth=2, color=red];
-    LiHuaImageNode -> mongodbPatternStack:note20230425 [penwidth=2, color=red];
+    LiHuaImageNode -> dataRaceBasicRulesStack:note20230430 [penwidth=2, color=red];
 
     // others
 }
