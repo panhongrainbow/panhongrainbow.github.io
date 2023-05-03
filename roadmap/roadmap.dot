@@ -80,7 +80,8 @@ digraph G {
         tracezStack [label="{
             <note20230418>opentelemetry file connection experiment(2023/4/18)|
             <note202304181>opentelemetry experiment with MongoDB connection(2023/4/18)|
-            <note20230425>opentelemetry experiment on server and client communication(2023/4/25)
+            <note20230425>opentelemetry experiment on server and client communication(2023/4/25)|
+            <note20230503>use baggage to deal with data race problem(2023/5/3)
             }", height=1];
     }
 
@@ -254,7 +255,7 @@ digraph G {
     assembleProjectStack:note20230417 -> netInsightsExplainStack:note20230417 [style=dashed, penwidth=2];
 
     // daily work
-    LiHuaImageNode -> golangExplainStack:note20230502 [penwidth=2, color=red];
+    LiHuaImageNode -> tracezStack:note20230503 [penwidth=2, color=red];
 
     // others
 }
