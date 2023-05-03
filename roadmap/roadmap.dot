@@ -139,7 +139,8 @@ digraph G {
             <note20230420>complicated of about data race(2023/4/20)|
             <note202304201>basic examples of data race(2023/4/20)|
             <note20230421>memory barrier(2023/4/21)|
-            <note20230424>confirm if the Linux distribution supports golang atomic(2023/4/24)
+            <note20230424>confirm if the Linux distribution supports golang atomic(2023/4/24)|
+            <note20230502>confirm the features of the context(2023/5/2)
             }", height=1];
         memoryBarrieStack [label="{
             <note20230421>understand memory barriers and use objdump to find memory barriers(2023/4/21)|
@@ -187,6 +188,7 @@ digraph G {
             }", height=1];
     }
 
+    // abstractionExplainz
     subgraph cluster_abstraction_explain {
         label="abstractionExplainedz";
         style=rounded;
@@ -199,13 +201,15 @@ digraph G {
             }", height=1];
     }
 
+    // toolsExplainz
     subgraph cluster_tools_explain {
         label="toolsExplainedz";
         style=rounded;
         penwidth=2;
         node [style=filled, penwidth=2, fillcolor="#FFFF77"];
         toolsExplainStack [label="{
-            <note20230422>explain how to use alternative to update the golang compiler(2023/4/22)
+            <note20230422>explain how to use alternative to update the golang compiler(2023/4/22)|
+            <note20230502>explain what Linux Swappiness is(2023/5/2)
             }", height=1];
     }
 
@@ -250,8 +254,7 @@ digraph G {
     assembleProjectStack:note20230417 -> netInsightsExplainStack:note20230417 [style=dashed, penwidth=2];
 
     // daily work
-    LiHuaImageNode -> hinderzStack [penwidth=2, color=red];
-    LiHuaImageNode -> algorithmExplainStack:note20230501 [penwidth=2, color=red];
+    LiHuaImageNode -> golangExplainStack:note20230502 [penwidth=2, color=red];
 
     // others
 }
