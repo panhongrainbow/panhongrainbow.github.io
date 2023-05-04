@@ -1,0 +1,33 @@
+digraph SubRoadmap {
+    // (4) project node
+    node [shape=record, fontname="Courier New"];
+
+    subgraph cluster_hinderz {
+        label="hinderz";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor=white];
+        hinderzStack [label="{
+            <note20230426>golang lock complicated rules(2023/4/26)|
+            <note20230427>mongodb document pattern(2023/4/27)|
+            <note20230428>explain golang ServeHTTP component(2023/4/28)|
+            <note20230429>observe golang context switch(2023/4/29)
+            }", height=1];
+    }
+
+
+    subgraph cluster_problems_discovered {
+        label="assemble project";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        assembleProjectStack [label="{
+            <note20230406>first assembly of the machine(2023/4/6)|
+            <note20230411>suspect that the tickerz serial number generator is not working properly(2023/4/11)|
+            <note202304111>upgrade tickerz v0.0.4(2023/4/11)|
+            <note20230412>filebasez needs to improve its search function(2023/4/12)|
+            <note20230416>upgrade filebasez v0.0.3(2023/4/16)|
+            <note20230417>deploy code on a test machine(2023/4/17)
+            }", height=1];
+    }
+/*end*/}

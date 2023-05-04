@@ -1,0 +1,39 @@
+digraph SubRoadmap {
+    // (6) document node
+    subgraph cluster_algorithm_explain {
+        label="algorithmExplainedz";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        algorithmExplainStack [label="{
+            <note20230324>finds the maximum subarray sum of a given array(2023/3/24)|
+            <note20230403>divide an array into three sections based on a pivot value called partition process(2023/4/3)|
+            <note20230419>make the visualiation of trieTree algorithm(2023/4/19)|
+            <note20230501>simplify 2-3 tree algorithm(2023/5/1)
+            }", height=1];
+    }
+
+    subgraph cluster_mongodb_pattern {
+        label="mongodb pattern";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        mongodbPatternStack [label="{
+            <note20230408>omitempty(2023/4/8)|
+            <note20230401>polymorphic(2023/4/1)|
+            <note20230410>subset(2023/4/10)|
+            <note20230425>bucket(2023/4/25)
+            }", height=1];
+    }
+
+    subgraph cluster_netInsights_explain {
+        label="netInsightsExplainedzExplainedz";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        netInsightsExplainStack [label="{
+            <note20230416>discuss the interaction between C language and Golang net functions(2023/4/16)|
+            <note20230417>use strace to trace the socket function to find the link to glibc(2023/4/17)
+            }", height=1];
+    }
+/*end*/}

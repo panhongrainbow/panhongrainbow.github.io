@@ -1,5 +1,4 @@
-digraph SubRoadmap {
-
+digraph G {
     // (1) config
     rankdir=TB;
     ranksep=2;
@@ -175,7 +174,7 @@ digraph SubRoadmap {
             <note20230420>select race examples(2023/4/20)
             }", height=1];
     }
-    
+
     golangExplainStack:note20230420 -> dataRaceBasicRulesStack [penwidth=2];
     golangExplainStack:note202304201 -> dataRaceComplicatedRulesStack [penwidth=2];
     golangExplainStack:note20230421 -> memoryBarrieStack [penwidth=2];
@@ -189,7 +188,7 @@ digraph SubRoadmap {
     middleExplainStack [label="{
             }", height=1];
     }
-    
+
     subgraph cluster_abstraction_explain {
         label="abstractionExplainedz";
         style=rounded;
@@ -201,7 +200,7 @@ digraph SubRoadmap {
             <note20230430>use a more realistic pinball game to simulate a normal distribution(2023/4/30)
             }", height=1];
     }
-    
+
     subgraph cluster_tools_explain {
         label="toolsExplainedz";
         style=rounded;

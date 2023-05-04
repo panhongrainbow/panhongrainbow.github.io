@@ -1,0 +1,34 @@
+digraph SubRoadmap {
+    // (8) other node
+    subgraph cluster_middle_explain {
+    label="middleExplainedzExplainedz";
+    style=rounded;
+    penwidth=2;
+    node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+    middleExplainStack [label="{
+            }", height=1];
+    }
+    
+    subgraph cluster_abstraction_explain {
+        label="abstractionExplainedz";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        abstractionExplainStack [label="{
+            <note20230415>test the normal distribution of statistics(2023/4/15)|
+            <note20230423>use a less realistic pinball game to simulate a normal distribution(2023/4/23)|
+            <note20230430>use a more realistic pinball game to simulate a normal distribution(2023/4/30)
+            }", height=1];
+    }
+    
+    subgraph cluster_tools_explain {
+        label="toolsExplainedz";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        toolsExplainStack [label="{
+            <note20230422>explain how to use alternative to update the golang compiler(2023/4/22)|
+            <note20230502>explain what Linux Swappiness is(2023/5/2)
+            }", height=1];
+    }
+/*end*/}

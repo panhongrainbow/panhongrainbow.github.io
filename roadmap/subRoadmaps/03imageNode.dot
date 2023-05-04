@@ -1,0 +1,19 @@
+digraph SubRoadmap {
+    // (3) image node
+    hinderzImageNode [label="<hinderz>", image="assets/hinderz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    tickerzImageNode [label="tickerz", image="assets/tickerz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    filebasezImageNode [label="<filebasez>", image="assets/filebasez.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    tracezImageNode [label="<tracez>", image="assets/tracez.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    projectImageNode [label="<project>", image="assets/project.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    designPatternsExplainedzImageNode [label="<designPatternsExplainedz>", image="assets/designPatternsExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    algorithmExplainedzImageNode [label="<algorithmExplainedz>", image="assets/algorithmExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    golangExplainedzImageNode [label="<golangExplainedz>", image="assets/golangExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    netInsightsExplainedzImageNode [label="<netInsightsExplainedz>", image="assets/netInsightsExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    middleExplainedzImageNode [label="<middleExplainedz>", image="assets/middleExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    abstractionExplainedzImageNode [label="<abstractionExplainedz>", image="assets/abstractionExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    girlImageNode [label="<debian>", image="assets/debianGirl.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    economyExplainedzImageNode [label="<economyExplainedz>", image="assets/economyExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    toolsExplainedzImageNode [label="<toolsExplainedz>", image="assets/toolsExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    languageExplainedzImageNode [label="<languageExplainedz>", image="assets/languageExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    astrologyExplainedzImageNode [label="<astrologyExplainedz>", image="assets/astrologyExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+/*end*/}

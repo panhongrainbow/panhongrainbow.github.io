@@ -1,16 +1,13 @@
-digraph SubRoadmap {
-
-    // (1) config
+digraph G {
     rankdir=TB;
     ranksep=2;
     splines=ortho;
     # bgcolor="#f0e2e9";
+
     node [shape=plaintext];
 
-    // (2) root node
     LiHuaImageNode [label="<start>", image="assets/Li-Hua.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
 
-    // (3) image node
     hinderzImageNode [label="<hinderz>", image="assets/hinderz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     tickerzImageNode [label="tickerz", image="assets/tickerz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     filebasezImageNode [label="<filebasez>", image="assets/filebasez.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
@@ -28,7 +25,9 @@ digraph SubRoadmap {
     languageExplainedzImageNode [label="<languageExplainedz>", image="assets/languageExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     astrologyExplainedzImageNode [label="<astrologyExplainedz>", image="assets/astrologyExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
 
-    // (4) project node
+    // projectImageNode
+    node [shape=record, fontname="Courier New"];
+
     node [shape=record, fontname="Courier New"];
 
     subgraph cluster_hinderz {
@@ -44,23 +43,6 @@ digraph SubRoadmap {
             }", height=1];
     }
 
-
-    subgraph cluster_problems_discovered {
-        label="assemble project";
-        style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
-        assembleProjectStack [label="{
-            <note20230406>first assembly of the machine(2023/4/6)|
-            <note20230411>suspect that the tickerz serial number generator is not working properly(2023/4/11)|
-            <note202304111>upgrade tickerz v0.0.4(2023/4/11)|
-            <note20230412>filebasez needs to improve its search function(2023/4/12)|
-            <note20230416>upgrade filebasez v0.0.3(2023/4/16)|
-            <note20230417>deploy code on a test machine(2023/4/17)
-            }", height=1];
-    }
-
-    // (5) library node
     subgraph cluster_tickerz {
         label="tickerz";
         style=rounded;
@@ -102,20 +84,21 @@ digraph SubRoadmap {
             }", height=1];
     }
 
-    // (6) document node
-    subgraph cluster_algorithm_explain {
-        label="algorithmExplainedz";
+    subgraph cluster_problems_discovered {
+        label="assemble project";
         style=rounded;
         penwidth=2;
         node [style=filled, penwidth=2, fillcolor="#FFFF77"];
-        algorithmExplainStack [label="{
-            <note20230324>finds the maximum subarray sum of a given array(2023/3/24)|
-            <note20230403>divide an array into three sections based on a pivot value called partition process(2023/4/3)|
-            <note20230419>make the visualiation of trieTree algorithm(2023/4/19)|
-            <note20230501>simplify 2-3 tree algorithm(2023/5/1)
+        assembleProjectStack [label="{
+            <note20230406>first assembly of the machine(2023/4/6)|
+            <note20230411>suspect that the tickerz serial number generator is not working properly(2023/4/11)|
+            <note202304111>upgrade tickerz v0.0.4(2023/4/11)|
+            <note20230412>filebasez needs to improve its search function(2023/4/12)|
+            <note20230416>upgrade filebasez v0.0.3(2023/4/16)|
+            <note20230417>deploy code on a test machine(2023/4/17)
             }", height=1];
     }
-
+    
     subgraph cluster_mongodb_pattern {
         label="mongodb pattern";
         style=rounded;
@@ -129,18 +112,20 @@ digraph SubRoadmap {
             }", height=1];
     }
 
-    subgraph cluster_netInsights_explain {
-        label="netInsightsExplainedzExplainedz";
+    subgraph cluster_algorithm_explain {
+        label="algorithmExplainedz";
         style=rounded;
         penwidth=2;
         node [style=filled, penwidth=2, fillcolor="#FFFF77"];
-        netInsightsExplainStack [label="{
-            <note20230416>discuss the interaction between C language and Golang net functions(2023/4/16)|
-            <note20230417>use strace to trace the socket function to find the link to glibc(2023/4/17)
+        algorithmExplainStack [label="{
+            <note20230324>finds the maximum subarray sum of a given array(2023/3/24)|
+            <note20230403>divide an array into three sections based on a pivot value called partition process(2023/4/3)|
+            <note20230419>make the visualiation of trieTree algorithm(2023/4/19)|
+            <note20230501>simplify 2-3 tree algorithm(2023/5/1)
             }", height=1];
     }
 
-    // (7) golang node
+    // golangExplainStack
     subgraph cluster_golang_explain {
         style=rounded;
         penwidth=2;
@@ -175,12 +160,25 @@ digraph SubRoadmap {
             <note20230420>select race examples(2023/4/20)
             }", height=1];
     }
-    
+
+    // golangExplainStack inside
     golangExplainStack:note20230420 -> dataRaceBasicRulesStack [penwidth=2];
     golangExplainStack:note202304201 -> dataRaceComplicatedRulesStack [penwidth=2];
     golangExplainStack:note20230421 -> memoryBarrieStack [penwidth=2];
 
-    // (8) other node
+    // netInsightsExplainStack
+    subgraph cluster_netInsights_explain {
+        label="netInsightsExplainedzExplainedz";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        netInsightsExplainStack [label="{
+            <note20230416>discuss the interaction between C language and Golang net functions(2023/4/16)|
+            <note20230417>use strace to trace the socket function to find the link to glibc(2023/4/17)
+            }", height=1];
+    }
+
+    // middleExplainStack
     subgraph cluster_middle_explain {
     label="middleExplainedzExplainedz";
     style=rounded;
@@ -189,7 +187,8 @@ digraph SubRoadmap {
     middleExplainStack [label="{
             }", height=1];
     }
-    
+
+    // abstractionExplainz
     subgraph cluster_abstraction_explain {
         label="abstractionExplainedz";
         style=rounded;
@@ -201,7 +200,8 @@ digraph SubRoadmap {
             <note20230430>use a more realistic pinball game to simulate a normal distribution(2023/4/30)
             }", height=1];
     }
-    
+
+    // toolsExplainz
     subgraph cluster_tools_explain {
         label="toolsExplainedz";
         style=rounded;
@@ -213,26 +213,21 @@ digraph SubRoadmap {
             }", height=1];
     }
 
-    // (9) link
-
-    // root -> imageNode
+    // image nodes
     LiHuaImageNode -> hinderzImageNode [penwidth=2];
-    LiHuaImageNode -> projectImageNode [penwidth=2];
-
     LiHuaImageNode -> tickerzImageNode [penwidth=2];
     LiHuaImageNode -> filebasezImageNode [penwidth=2];
     LiHuaImageNode -> tracezImageNode [penwidth=2];
-
-    LiHuaImageNode -> algorithmExplainedzImageNode [penwidth=2];
+    LiHuaImageNode -> projectImageNode [penwidth=2];
     LiHuaImageNode -> designPatternsExplainedzImageNode [penwidth=2];
-    LiHuaImageNode -> netInsightsExplainedzImageNode [penwidth=2];
-
-    LiHuaImageNode -> golangExplainedzImageNode [penwidth=2];
-
+    LiHuaImageNode -> algorithmExplainedzImageNode [penwidth=2];
     LiHuaImageNode -> middleExplainedzImageNode [penwidth=2];
     LiHuaImageNode -> abstractionExplainedzImageNode [penwidth=2];
-
+    LiHuaImageNode -> golangExplainedzImageNode [penwidth=2];
+    LiHuaImageNode -> netInsightsExplainedzImageNode [penwidth=2];
     LiHuaImageNode -> girlImageNode [penwidth=2];
+
+    // ohter images
     girlImageNode -> economyExplainedzImageNode [penwidth=2];
     girlImageNode -> toolsExplainedzImageNode [penwidth=2];
     girlImageNode -> languageExplainedzImageNode [penwidth=2];
@@ -240,23 +235,19 @@ digraph SubRoadmap {
 
     // stack nodes
     hinderzImageNode -> hinderzStack [penwidth=2];
-    projectImageNode -> assembleProjectStack [penwidth=2];
-
     tickerzImageNode -> tickerzStack [penwidth=2];
     filebasezImageNode -> filebasezStack [penwidth=2];
     tracezImageNode -> tracezStack [penwidth=2];
-
-    algorithmExplainedzImageNode -> algorithmExplainStack [penwidth=2];
+    projectImageNode -> assembleProjectStack [penwidth=2];
     designPatternsExplainedzImageNode -> mongodbPatternStack [penwidth=2];
-    netInsightsExplainedzImageNode -> netInsightsExplainStack [penwidth=2];
-
+    algorithmExplainedzImageNode -> algorithmExplainStack [penwidth=2];
     golangExplainedzImageNode -> golangExplainStack [penwidth=2];
-
+    netInsightsExplainedzImageNode -> netInsightsExplainStack [penwidth=2];
     middleExplainedzImageNode -> middleExplainStack [penwidth=2];
     abstractionExplainedzImageNode -> abstractionExplainStack [penwidth=2];
     toolsExplainedzImageNode -> toolsExplainStack [penwidth=2];
 
-    // interaction
+    // history
     assembleProjectStack:note20230411 -> tickerzStack:note20230411 [style=dashed, penwidth=2];
     assembleProjectStack:note202304111 -> tickerzStack:note202304111 [style=dashed, penwidth=2];
     assembleProjectStack:note20230412 -> filebasezStack:note20230412 [style=dashed, penwidth=2];
@@ -264,4 +255,6 @@ digraph SubRoadmap {
 
     // daily work
     LiHuaImageNode -> tracezStack:note20230503 [penwidth=2, color=red];
+
+    // others
 }

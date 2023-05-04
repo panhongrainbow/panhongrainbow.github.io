@@ -1,0 +1,53 @@
+digraph SubRoadmap {
+    // (9) link
+
+    // root -> imageNode
+    LiHuaImageNode -> hinderzImageNode [penwidth=2];
+    LiHuaImageNode -> projectImageNode [penwidth=2];
+
+    LiHuaImageNode -> tickerzImageNode [penwidth=2];
+    LiHuaImageNode -> filebasezImageNode [penwidth=2];
+    LiHuaImageNode -> tracezImageNode [penwidth=2];
+
+    LiHuaImageNode -> algorithmExplainedzImageNode [penwidth=2];
+    LiHuaImageNode -> designPatternsExplainedzImageNode [penwidth=2];
+    LiHuaImageNode -> netInsightsExplainedzImageNode [penwidth=2];
+
+    LiHuaImageNode -> golangExplainedzImageNode [penwidth=2];
+
+    LiHuaImageNode -> middleExplainedzImageNode [penwidth=2];
+    LiHuaImageNode -> abstractionExplainedzImageNode [penwidth=2];
+
+    LiHuaImageNode -> girlImageNode [penwidth=2];
+    girlImageNode -> economyExplainedzImageNode [penwidth=2];
+    girlImageNode -> toolsExplainedzImageNode [penwidth=2];
+    girlImageNode -> languageExplainedzImageNode [penwidth=2];
+    girlImageNode -> astrologyExplainedzImageNode [penwidth=2];
+
+    // stack nodes
+    hinderzImageNode -> hinderzStack [penwidth=2];
+    projectImageNode -> assembleProjectStack [penwidth=2];
+
+    tickerzImageNode -> tickerzStack [penwidth=2];
+    filebasezImageNode -> filebasezStack [penwidth=2];
+    tracezImageNode -> tracezStack [penwidth=2];
+
+    algorithmExplainedzImageNode -> algorithmExplainStack [penwidth=2];
+    designPatternsExplainedzImageNode -> mongodbPatternStack [penwidth=2];
+    netInsightsExplainedzImageNode -> netInsightsExplainStack [penwidth=2];
+
+    golangExplainedzImageNode -> golangExplainStack [penwidth=2];
+
+    middleExplainedzImageNode -> middleExplainStack [penwidth=2];
+    abstractionExplainedzImageNode -> abstractionExplainStack [penwidth=2];
+    toolsExplainedzImageNode -> toolsExplainStack [penwidth=2];
+
+    // interaction
+    assembleProjectStack:note20230411 -> tickerzStack:note20230411 [style=dashed, penwidth=2];
+    assembleProjectStack:note202304111 -> tickerzStack:note202304111 [style=dashed, penwidth=2];
+    assembleProjectStack:note20230412 -> filebasezStack:note20230412 [style=dashed, penwidth=2];
+    assembleProjectStack:note20230417 -> netInsightsExplainStack:note20230417 [style=dashed, penwidth=2];
+
+    // daily work
+    LiHuaImageNode -> tracezStack:note20230503 [penwidth=2, color=red];
+/*end*/}

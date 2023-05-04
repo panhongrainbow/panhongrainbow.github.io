@@ -1,0 +1,43 @@
+digraph SubRoadmap {
+    // (5) library node
+    subgraph cluster_tickerz {
+        label="tickerz";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        tickerzStack [label="{
+            <note20230404>base refactors the code and adds new comments(2023/4/4)|
+            <note20230407>base splits the CheckOpts function into smaller functions(2023/4/7)|
+            <note20230411>enhance the functionality of the serial number generator(2023/4/11)|
+            <note202304111>release v0.0.4(2023/4/11)
+            }", height=1];
+    }
+
+    subgraph cluster_filebasez {
+        label="filebasez";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        filebasezStack [label="{
+            <note20230327>create any shared memory segments(2023/3/27)|
+            <note20230329>release v0.0.1(2023/3/29)|
+            <note20230412>create a new data structure called speedy array(2023/4/12)|
+            <note20230413>finish a draft of speedyArray(2023/4/13)|
+            <note20230415>annotate all the speedyarray code(2023/4/15)|
+            <note20230416>release v0.0.3(2023/4/16)
+            }", height=1];
+    }
+
+    subgraph cluster_tracez {
+        label="tracez";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        tracezStack [label="{
+            <note20230418>opentelemetry file connection experiment(2023/4/18)|
+            <note202304181>opentelemetry experiment with MongoDB connection(2023/4/18)|
+            <note20230425>opentelemetry experiment on server and client communication(2023/4/25)|
+            <note20230503>use baggage to deal with data race problem(2023/5/3)
+            }", height=1];
+    }
+/*end*/}

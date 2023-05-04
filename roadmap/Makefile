@@ -1,6 +1,7 @@
 .PHONY: help
 
 roadmap:
+	@bash combine.sh
 	dot -Tpng roadmap.dot -o roadmap.png
 help:
 	@echo "Usage: make [target]"
