@@ -13,6 +13,18 @@ digraph SubRoadmap {
             }", height=1];
     }
 
+    subgraph cluster_slice223tree {
+        label="slice223tree";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        slice223treeStack [label="{
+            <note20230504>consider to simulate 2-3 tree with slices and actively balance the 2-3 tree(2023/5/4)
+            }", height=1];
+    }
+    algorithmExplainStack:note20230501 -> strategy20230504ImageNode [penwidth=2];
+    strategy20230504ImageNode -> slice223treeStack:note20230504 [penwidth=2];
+
     subgraph cluster_mongodb_pattern {
         label="mongodb pattern";
         style=rounded;

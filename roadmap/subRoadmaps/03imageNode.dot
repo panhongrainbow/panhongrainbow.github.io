@@ -16,4 +16,7 @@ digraph SubRoadmap {
     toolsExplainedzImageNode [label="<toolsExplainedz>", image="assets/toolsExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     languageExplainedzImageNode [label="<languageExplainedz>", image="assets/languageExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     astrologyExplainedzImageNode [label="<astrologyExplainedz>", image="assets/astrologyExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+
+    strategy20230503ImageNode [label="<strategy>", image="assets/strategy.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    strategy20230504ImageNode [label="<strategy>", image="assets/strategy.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
 /*end*/}

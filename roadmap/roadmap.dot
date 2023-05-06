@@ -28,6 +28,9 @@ digraph SubRoadmap {
     languageExplainedzImageNode [label="<languageExplainedz>", image="assets/languageExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     astrologyExplainedzImageNode [label="<astrologyExplainedz>", image="assets/astrologyExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
 
+    strategy20230503ImageNode [label="<strategy>", image="assets/strategy.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    strategy20230504ImageNode [label="<strategy>", image="assets/strategy.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+
     // (4) project node
     node [shape=record, fontname="Courier New"];
 
@@ -102,6 +105,18 @@ digraph SubRoadmap {
             }", height=1];
     }
 
+    subgraph cluster_tracez_pass_depth {
+        label="tracezPassDepth";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        tracezPassDepthStack [label="{
+            <note20230503>use atomic value to deal with data race problem and create index at the same time(2023/5/3)
+            }", height=1];
+    }
+    tracezStack:note20230503 -> strategy20230503ImageNode [penwidth=2];
+    strategy20230503ImageNode -> tracezPassDepthStack:note20230503 [penwidth=2];
+
     // (6) document node
     subgraph cluster_algorithm_explain {
         label="algorithmExplainedz";
@@ -115,6 +130,18 @@ digraph SubRoadmap {
             <note20230501>simplify 2-3 tree algorithm(2023/5/1)
             }", height=1];
     }
+
+    subgraph cluster_slice223tree {
+        label="slice223tree";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        slice223treeStack [label="{
+            <note20230504>consider to simulate 2-3 tree with slices and actively balance the 2-3 tree(2023/5/4)
+            }", height=1];
+    }
+    algorithmExplainStack:note20230501 -> strategy20230504ImageNode [penwidth=2];
+    strategy20230504ImageNode -> slice223treeStack:note20230504 [penwidth=2];
 
     subgraph cluster_mongodb_pattern {
         label="mongodb pattern";
@@ -263,5 +290,8 @@ digraph SubRoadmap {
     assembleProjectStack:note20230417 -> netInsightsExplainStack:note20230417 [style=dashed, penwidth=2];
 
     // daily work
-    LiHuaImageNode -> tracezStack:note20230503 [penwidth=2, color=red];
+    // LiHuaImageNode -> tracezStack:note20230503 [penwidth=2, color=red];
+    dataRaceBasicRulesStack -> tickerzImageNode [penwidth=3, color=green];
+    dataRaceBasicRulesStack -> filebasezImageNode [penwidth=3, color=green];
+    dataRaceBasicRulesStack -> tracezImageNode [penwidth=3, color=green];
 }

@@ -49,5 +49,8 @@ digraph SubRoadmap {
     assembleProjectStack:note20230417 -> netInsightsExplainStack:note20230417 [style=dashed, penwidth=2];
 
     // daily work
-    LiHuaImageNode -> tracezStack:note20230503 [penwidth=2, color=red];
+    // LiHuaImageNode -> tracezStack:note20230503 [penwidth=2, color=red];
+    dataRaceBasicRulesStack -> tickerzImageNode [penwidth=3, color=green];
+    dataRaceBasicRulesStack -> filebasezImageNode [penwidth=3, color=green];
+    dataRaceBasicRulesStack -> tracezImageNode [penwidth=3, color=green];
 /*end*/}

@@ -40,4 +40,16 @@ digraph SubRoadmap {
             <note20230503>use baggage to deal with data race problem(2023/5/3)
             }", height=1];
     }
+
+    subgraph cluster_tracez_pass_depth {
+        label="tracezPassDepth";
+        style=rounded;
+        penwidth=2;
+        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        tracezPassDepthStack [label="{
+            <note20230503>use atomic value to deal with data race problem and create index at the same time(2023/5/3)
+            }", height=1];
+    }
+    tracezStack:note20230503 -> strategy20230503ImageNode [penwidth=2];
+    strategy20230503ImageNode -> tracezPassDepthStack:note20230503 [penwidth=2];
 /*end*/}
