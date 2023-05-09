@@ -4,7 +4,7 @@ digraph SubRoadmap {
         label="tickerz";
         style=rounded;
         penwidth=3;
-        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
+        node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
         tickerzStack [label="{
             <note20230404>base refactors the code and adds new comments(2023/4/4)|
             <note20230407>base splits the CheckOpts function into smaller functions(2023/4/7)|
@@ -17,7 +17,7 @@ digraph SubRoadmap {
         label="filebasez";
         style=rounded;
         penwidth=3;
-        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
+        node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
         filebasezStack [label="{
             <note20230327>create any shared memory segments(2023/3/27)|
             <note20230329>release v0.0.1(2023/3/29)|
@@ -32,7 +32,7 @@ digraph SubRoadmap {
         label="tracez";
         style=rounded;
         penwidth=3;
-        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
+        node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
         tracezStack [label="{
             <note20230418>opentelemetry file connection experiment(2023/4/18)|
             <note202304181>opentelemetry experiment with MongoDB connection(2023/4/18)|
@@ -45,7 +45,7 @@ digraph SubRoadmap {
         label="tracezPassDepth";
         style=rounded;
         penwidth=3;
-        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
+        node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
         tracezPassDepthStack [label="{
             <note20230503>use atomic value to deal with data race problem and create index at the same time(2023/5/3)
             }", height=1];

@@ -25,7 +25,7 @@ digraph SubRoadmap {
         label="toolsExplainedz";
         style=rounded;
         penwidth=3;
-        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
+        node [style=filled, penwidth=3, fillcolor="#A0B9EA"];
         toolsExplainStack [label="{
             <note20230422>explain how to use alternative to update the golang compiler(2023/4/22)|
             <note20230502>explain what Linux Swappiness is(2023/5/2)

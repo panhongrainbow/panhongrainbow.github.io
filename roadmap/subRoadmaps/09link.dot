@@ -53,4 +53,5 @@ digraph SubRoadmap {
     dataRaceRulesStackImageNode -> tickerzImageNode [penwidth=3, color=green];
     dataRaceRulesStackImageNode -> filebasezImageNode [penwidth=3, color=green];
     dataRaceRulesStackImageNode -> tracezImageNode [penwidth=3, color=green];
+    mongodbPatternStack -> tracezImageNode [penwidth=3, color=green];
 /*end*/}

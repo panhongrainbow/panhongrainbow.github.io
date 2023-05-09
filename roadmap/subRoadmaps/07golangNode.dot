@@ -4,7 +4,7 @@ digraph SubRoadmap {
         style=rounded;
         penwidth=3;
         label="golangExplainedz";
-        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
+        node [style=filled, penwidth=3, fillcolor="#B9EAA0"];
         golangExplainStack [label="{
             <note20230411>explain what heap arena is(2023/4/11)|
             <note20230413>implement a fake interface(2023/4/13)|
@@ -31,9 +31,9 @@ digraph SubRoadmap {
             <note202304301>Rule8: timer2 rule(2023/4/30)|
             <note20230501>Rule9: select rule(2023/5/1)|
             <note202305011>Rule10: interface rule(2023/5/1)|
-            <note20230502>Rule11: closure rule(2023/5/2)|
-            <note202305021>Rule11: closure rule(2023/5/2)|
-            <note20230508>Rule12: closure rule(2023/5/8)
+            <note20230508>Rule11: closure rule(2023/5/8)|
+            <note202305081>Rule12: list rule(2023/5/8)|
+            <note202305082>Rule13: iocopy rule(2023/5/8)
             }", height=1];
     }
 
