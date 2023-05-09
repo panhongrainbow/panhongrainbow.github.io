@@ -5,8 +5,8 @@ digraph SubRoadmap {
     subgraph cluster_hinderz {
         label="hinderz";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor=white];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor=white];
         hinderzStack [label="{
             <note20230426>golang lock complicated rules(2023/4/26)|
             <note20230427>mongodb document pattern(2023/4/27)|
@@ -19,8 +19,8 @@ digraph SubRoadmap {
     subgraph cluster_problems_discovered {
         label="assemble project";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         assembleProjectStack [label="{
             <note20230406>first assembly of the machine(2023/4/6)|
             <note20230411>suspect that the tickerz serial number generator is not working properly(2023/4/11)|

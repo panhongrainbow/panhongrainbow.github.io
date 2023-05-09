@@ -3,8 +3,8 @@ digraph SubRoadmap {
     subgraph cluster_algorithm_explain {
         label="algorithmExplainedz";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         algorithmExplainStack [label="{
             <note20230324>finds the maximum subarray sum of a given array(2023/3/24)|
             <note20230403>divide an array into three sections based on a pivot value called partition process(2023/4/3)|
@@ -16,20 +16,20 @@ digraph SubRoadmap {
     subgraph cluster_slice223tree {
         label="slice223tree";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         slice223treeStack [label="{
             <note20230504>consider to simulate 2-3 tree with slices and actively balance the 2-3 tree(2023/5/4)
             }", height=1];
     }
-    algorithmExplainStack:note20230501 -> strategy20230504ImageNode [penwidth=2];
-    strategy20230504ImageNode -> slice223treeStack:note20230504 [penwidth=2];
+    algorithmExplainStack:note20230501 -> strategy20230504ImageNode [penwidth=3];
+    strategy20230504ImageNode -> slice223treeStack:note20230504 [penwidth=3];
 
     subgraph cluster_mongodb_pattern {
         label="mongodb pattern";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         mongodbPatternStack [label="{
             <note20230408>omitempty(2023/4/8)|
             <note20230401>polymorphic(2023/4/1)|
@@ -41,8 +41,8 @@ digraph SubRoadmap {
     subgraph cluster_netInsights_explain {
         label="netInsightsExplainedzExplainedz";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         netInsightsExplainStack [label="{
             <note20230416>discuss the interaction between C language and Golang net functions(2023/4/16)|
             <note20230417>use strace to trace the socket function to find the link to glibc(2023/4/17)

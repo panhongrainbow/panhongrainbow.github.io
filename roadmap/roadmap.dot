@@ -6,6 +6,9 @@ digraph SubRoadmap {
     splines=ortho;
     # bgcolor="#f0e2e9";
     node [shape=plaintext];
+    edge [splines=compound,margin=0.3]
+    // node [margin=0.9,shape=plaintext,fontsize=30];
+    // edge [margin=0.9,fontsize=15];
 
     // (2) root node
     LiHuaImageNode [label="<start>", image="assets/Li-Hua.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
@@ -19,6 +22,7 @@ digraph SubRoadmap {
     designPatternsExplainedzImageNode [label="<designPatternsExplainedz>", image="assets/designPatternsExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     algorithmExplainedzImageNode [label="<algorithmExplainedz>", image="assets/algorithmExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     golangExplainedzImageNode [label="<golangExplainedz>", image="assets/golangExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    dataRaceRulesStackImageNode [label="<golangExplainedz>", image="assets/dataRaceRulesStack.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     netInsightsExplainedzImageNode [label="<netInsightsExplainedz>", image="assets/netInsightsExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     middleExplainedzImageNode [label="<middleExplainedz>", image="assets/middleExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     abstractionExplainedzImageNode [label="<abstractionExplainedz>", image="assets/abstractionExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
@@ -37,8 +41,8 @@ digraph SubRoadmap {
     subgraph cluster_hinderz {
         label="hinderz";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor=white];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor=white];
         hinderzStack [label="{
             <note20230426>golang lock complicated rules(2023/4/26)|
             <note20230427>mongodb document pattern(2023/4/27)|
@@ -51,8 +55,8 @@ digraph SubRoadmap {
     subgraph cluster_problems_discovered {
         label="assemble project";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         assembleProjectStack [label="{
             <note20230406>first assembly of the machine(2023/4/6)|
             <note20230411>suspect that the tickerz serial number generator is not working properly(2023/4/11)|
@@ -67,8 +71,8 @@ digraph SubRoadmap {
     subgraph cluster_tickerz {
         label="tickerz";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         tickerzStack [label="{
             <note20230404>base refactors the code and adds new comments(2023/4/4)|
             <note20230407>base splits the CheckOpts function into smaller functions(2023/4/7)|
@@ -80,8 +84,8 @@ digraph SubRoadmap {
     subgraph cluster_filebasez {
         label="filebasez";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         filebasezStack [label="{
             <note20230327>create any shared memory segments(2023/3/27)|
             <note20230329>release v0.0.1(2023/3/29)|
@@ -95,8 +99,8 @@ digraph SubRoadmap {
     subgraph cluster_tracez {
         label="tracez";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         tracezStack [label="{
             <note20230418>opentelemetry file connection experiment(2023/4/18)|
             <note202304181>opentelemetry experiment with MongoDB connection(2023/4/18)|
@@ -108,21 +112,21 @@ digraph SubRoadmap {
     subgraph cluster_tracez_pass_depth {
         label="tracezPassDepth";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         tracezPassDepthStack [label="{
             <note20230503>use atomic value to deal with data race problem and create index at the same time(2023/5/3)
             }", height=1];
     }
-    tracezStack:note20230503 -> strategy20230503ImageNode [penwidth=2];
-    strategy20230503ImageNode -> tracezPassDepthStack:note20230503 [penwidth=2];
+    tracezStack:note20230503 -> strategy20230503ImageNode [penwidth=3];
+    strategy20230503ImageNode -> tracezPassDepthStack:note20230503 [penwidth=3];
 
     // (6) document node
     subgraph cluster_algorithm_explain {
         label="algorithmExplainedz";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         algorithmExplainStack [label="{
             <note20230324>finds the maximum subarray sum of a given array(2023/3/24)|
             <note20230403>divide an array into three sections based on a pivot value called partition process(2023/4/3)|
@@ -134,20 +138,20 @@ digraph SubRoadmap {
     subgraph cluster_slice223tree {
         label="slice223tree";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         slice223treeStack [label="{
             <note20230504>consider to simulate 2-3 tree with slices and actively balance the 2-3 tree(2023/5/4)
             }", height=1];
     }
-    algorithmExplainStack:note20230501 -> strategy20230504ImageNode [penwidth=2];
-    strategy20230504ImageNode -> slice223treeStack:note20230504 [penwidth=2];
+    algorithmExplainStack:note20230501 -> strategy20230504ImageNode [penwidth=3];
+    strategy20230504ImageNode -> slice223treeStack:note20230504 [penwidth=3];
 
     subgraph cluster_mongodb_pattern {
         label="mongodb pattern";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         mongodbPatternStack [label="{
             <note20230408>omitempty(2023/4/8)|
             <note20230401>polymorphic(2023/4/1)|
@@ -159,8 +163,8 @@ digraph SubRoadmap {
     subgraph cluster_netInsights_explain {
         label="netInsightsExplainedzExplainedz";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         netInsightsExplainStack [label="{
             <note20230416>discuss the interaction between C language and Golang net functions(2023/4/16)|
             <note20230417>use strace to trace the socket function to find the link to glibc(2023/4/17)
@@ -170,9 +174,9 @@ digraph SubRoadmap {
     // (7) golang node
     subgraph cluster_golang_explain {
         style=rounded;
-        penwidth=2;
+        penwidth=3;
         label="golangExplainedz";
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         golangExplainStack [label="{
             <note20230411>explain what heap arena is(2023/4/11)|
             <note20230413>implement a fake interface(2023/4/13)|
@@ -188,31 +192,34 @@ digraph SubRoadmap {
             <note20230421>understand memory barriers and use objdump to find memory barriers(2023/4/21)|
             <note20230422>confirm that the channel uses memory barriers(2023/4/22)
             }", height=1];
-        dataRaceBasicRulesStack [label="{
-            <note20230424>Rule1: When global variables or static variables are shared among multiple Goroutines(2023/4/24)|
-            <note202304241>Rule2: As long as the program contains malfunction channel(2023/4/24)|
-            <note202304242>Rule3: As long as the program contains malfunction sync mechanism(2023/4/24)|
-            <note202304243>Rule4: As long as the program contains closure(2023/4/24)|
-            <note202304244>Rule5: Reading and writing map or configuration information in multiple Goroutines(2023/4/24)|
-            <note20230426>Rule6: As long as the program accesses interface variables(2023/4/26)|
-            <note20230430>Rule7: When list is shared among multiple Goroutines(2023/4/30)|
-            <note202304301>Rule8: As long as the program contains malfunction timer mechanism(2023/4/30)
-            }", height=1];
-        dataRaceComplicatedRulesStack [label="{
-            <note20230420>select race examples(2023/4/20)
+        dataRaceRulesStack [label="{
+            <note20230424>Rule1: goroutines rule(2023/4/24)|
+            <note202304241>Rule2: sync rule(2023/4/24)|
+            <note202304242>Rule3: sync2 rule(2023/4/24)|
+            <note202304243>Rule4: map rule(2023/4/24)|
+            <note202304244>Rule5: channel rule(2023/4/24)|
+            <note20230426>Rule6: channel2 rule(2023/4/26)|
+            <note20230430>Rule7: timer rule(2023/4/30)|
+            <note202304301>Rule8: timer2 rule(2023/4/30)|
+            <note20230501>Rule9: select rule(2023/5/1)|
+            <note202305011>Rule10: interface rule(2023/5/1)|
+            <note20230502>Rule11: closure rule(2023/5/2)|
+            <note202305021>Rule11: closure rule(2023/5/2)|
+            <note20230508>Rule12: closure rule(2023/5/8)
             }", height=1];
     }
-    
-    golangExplainStack:note20230420 -> dataRaceBasicRulesStack [penwidth=2];
-    golangExplainStack:note202304201 -> dataRaceComplicatedRulesStack [penwidth=2];
-    golangExplainStack:note20230421 -> memoryBarrieStack [penwidth=2];
+
+    golangExplainedzImageNode -> dataRaceRulesStackImageNode  [penwidth=3,color=pink,arrowhead=dot];
+    dataRaceRulesStackImageNode -> dataRaceRulesStack [penwidth=3,color=pink];
+    golangExplainStack:note20230420 -> dataRaceRulesStack [penwidth=3];
+    golangExplainStack:note20230421 -> memoryBarrieStack [penwidth=3];
 
     // (8) other node
     subgraph cluster_middle_explain {
     label="middleExplainedzExplainedz";
     style=rounded;
-    penwidth=2;
-    node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+    penwidth=3;
+    node [style=filled, penwidth=3, fillcolor="#FFFF77"];
     middleExplainStack [label="{
             }", height=1];
     }
@@ -220,8 +227,8 @@ digraph SubRoadmap {
     subgraph cluster_abstraction_explain {
         label="abstractionExplainedz";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         abstractionExplainStack [label="{
             <note20230415>test the normal distribution of statistics(2023/4/15)|
             <note20230423>use a less realistic pinball game to simulate a normal distribution(2023/4/23)|
@@ -232,8 +239,8 @@ digraph SubRoadmap {
     subgraph cluster_tools_explain {
         label="toolsExplainedz";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         toolsExplainStack [label="{
             <note20230422>explain how to use alternative to update the golang compiler(2023/4/22)|
             <note20230502>explain what Linux Swappiness is(2023/5/2)
@@ -243,55 +250,55 @@ digraph SubRoadmap {
     // (9) link
 
     // root -> imageNode
-    LiHuaImageNode -> hinderzImageNode [penwidth=2];
-    LiHuaImageNode -> projectImageNode [penwidth=2];
+    LiHuaImageNode -> hinderzImageNode [penwidth=3,arrowhead=dot];
+    LiHuaImageNode -> projectImageNode [penwidth=3,arrowhead=dot];
 
-    LiHuaImageNode -> tickerzImageNode [penwidth=2];
-    LiHuaImageNode -> filebasezImageNode [penwidth=2];
-    LiHuaImageNode -> tracezImageNode [penwidth=2];
+    LiHuaImageNode -> tickerzImageNode [penwidth=3,arrowhead=dot];
+    LiHuaImageNode -> filebasezImageNode [penwidth=3,arrowhead=dot];
+    LiHuaImageNode -> tracezImageNode [penwidth=3,arrowhead=dot];
 
-    LiHuaImageNode -> algorithmExplainedzImageNode [penwidth=2];
-    LiHuaImageNode -> designPatternsExplainedzImageNode [penwidth=2];
-    LiHuaImageNode -> netInsightsExplainedzImageNode [penwidth=2];
+    LiHuaImageNode -> algorithmExplainedzImageNode [penwidth=3,arrowhead=dot];
+    LiHuaImageNode -> designPatternsExplainedzImageNode [penwidth=3,arrowhead=dot];
+    LiHuaImageNode -> netInsightsExplainedzImageNode [penwidth=3,arrowhead=dot];
 
-    LiHuaImageNode -> golangExplainedzImageNode [penwidth=2];
+    LiHuaImageNode -> golangExplainedzImageNode [penwidth=3,arrowhead=dot];
 
-    LiHuaImageNode -> middleExplainedzImageNode [penwidth=2];
-    LiHuaImageNode -> abstractionExplainedzImageNode [penwidth=2];
+    LiHuaImageNode -> middleExplainedzImageNode [penwidth=3,arrowhead=dot];
+    LiHuaImageNode -> abstractionExplainedzImageNode [penwidth=3,arrowhead=dot];
 
-    LiHuaImageNode -> girlImageNode [penwidth=2];
-    girlImageNode -> economyExplainedzImageNode [penwidth=2];
-    girlImageNode -> toolsExplainedzImageNode [penwidth=2];
-    girlImageNode -> languageExplainedzImageNode [penwidth=2];
-    girlImageNode -> astrologyExplainedzImageNode [penwidth=2];
+    LiHuaImageNode -> girlImageNode [penwidth=3,arrowhead=dot];
+    girlImageNode -> economyExplainedzImageNode [penwidth=3,arrowhead=dot];
+    girlImageNode -> toolsExplainedzImageNode [penwidth=3,arrowhead=dot];
+    girlImageNode -> languageExplainedzImageNode [penwidth=3,arrowhead=dot];
+    girlImageNode -> astrologyExplainedzImageNode [penwidth=3,arrowhead=dot];
 
     // stack nodes
-    hinderzImageNode -> hinderzStack [penwidth=2];
-    projectImageNode -> assembleProjectStack [penwidth=2];
+    hinderzImageNode -> hinderzStack [penwidth=3];
+    projectImageNode -> assembleProjectStack [penwidth=3];
 
-    tickerzImageNode -> tickerzStack [penwidth=2];
-    filebasezImageNode -> filebasezStack [penwidth=2];
-    tracezImageNode -> tracezStack [penwidth=2];
+    tickerzImageNode -> tickerzStack [penwidth=3];
+    filebasezImageNode -> filebasezStack [penwidth=3];
+    tracezImageNode -> tracezStack [penwidth=3];
 
-    algorithmExplainedzImageNode -> algorithmExplainStack [penwidth=2];
-    designPatternsExplainedzImageNode -> mongodbPatternStack [penwidth=2];
-    netInsightsExplainedzImageNode -> netInsightsExplainStack [penwidth=2];
+    algorithmExplainedzImageNode -> algorithmExplainStack [penwidth=3];
+    designPatternsExplainedzImageNode -> mongodbPatternStack [penwidth=3];
+    netInsightsExplainedzImageNode -> netInsightsExplainStack [penwidth=3];
 
-    golangExplainedzImageNode -> golangExplainStack [penwidth=2];
+    golangExplainedzImageNode -> golangExplainStack [penwidth=3];
 
-    middleExplainedzImageNode -> middleExplainStack [penwidth=2];
-    abstractionExplainedzImageNode -> abstractionExplainStack [penwidth=2];
-    toolsExplainedzImageNode -> toolsExplainStack [penwidth=2];
+    middleExplainedzImageNode -> middleExplainStack [penwidth=3];
+    abstractionExplainedzImageNode -> abstractionExplainStack [penwidth=3];
+    toolsExplainedzImageNode -> toolsExplainStack [penwidth=3];
 
     // interaction
-    assembleProjectStack:note20230411 -> tickerzStack:note20230411 [style=dashed, penwidth=2];
-    assembleProjectStack:note202304111 -> tickerzStack:note202304111 [style=dashed, penwidth=2];
-    assembleProjectStack:note20230412 -> filebasezStack:note20230412 [style=dashed, penwidth=2];
-    assembleProjectStack:note20230417 -> netInsightsExplainStack:note20230417 [style=dashed, penwidth=2];
+    assembleProjectStack:note20230411 -> tickerzStack:note20230411 [style=dashed, penwidth=3];
+    assembleProjectStack:note202304111 -> tickerzStack:note202304111 [style=dashed, penwidth=3];
+    assembleProjectStack:note20230412 -> filebasezStack:note20230412 [style=dashed, penwidth=3];
+    assembleProjectStack:note20230417 -> netInsightsExplainStack:note20230417 [style=dashed, penwidth=3];
 
     // daily work
-    // LiHuaImageNode -> tracezStack:note20230503 [penwidth=2, color=red];
-    dataRaceBasicRulesStack -> tickerzImageNode [penwidth=3, color=green];
-    dataRaceBasicRulesStack -> filebasezImageNode [penwidth=3, color=green];
-    dataRaceBasicRulesStack -> tracezImageNode [penwidth=3, color=green];
+    // LiHuaImageNode -> tracezStack:note20230503 [penwidth=3, color=red];
+    dataRaceRulesStackImageNode -> tickerzImageNode [penwidth=3, color=green];
+    dataRaceRulesStackImageNode -> filebasezImageNode [penwidth=3, color=green];
+    dataRaceRulesStackImageNode -> tracezImageNode [penwidth=3, color=green];
 }

@@ -8,6 +8,7 @@ digraph SubRoadmap {
     designPatternsExplainedzImageNode [label="<designPatternsExplainedz>", image="assets/designPatternsExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     algorithmExplainedzImageNode [label="<algorithmExplainedz>", image="assets/algorithmExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     golangExplainedzImageNode [label="<golangExplainedz>", image="assets/golangExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    dataRaceRulesStackImageNode [label="<golangExplainedz>", image="assets/dataRaceRulesStack.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     netInsightsExplainedzImageNode [label="<netInsightsExplainedz>", image="assets/netInsightsExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     middleExplainedzImageNode [label="<middleExplainedz>", image="assets/middleExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     abstractionExplainedzImageNode [label="<abstractionExplainedz>", image="assets/abstractionExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];

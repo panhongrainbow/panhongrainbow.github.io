@@ -2,9 +2,9 @@ digraph SubRoadmap {
     // (7) golang node
     subgraph cluster_golang_explain {
         style=rounded;
-        penwidth=2;
+        penwidth=3;
         label="golangExplainedz";
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         golangExplainStack [label="{
             <note20230411>explain what heap arena is(2023/4/11)|
             <note20230413>implement a fake interface(2023/4/13)|
@@ -20,22 +20,25 @@ digraph SubRoadmap {
             <note20230421>understand memory barriers and use objdump to find memory barriers(2023/4/21)|
             <note20230422>confirm that the channel uses memory barriers(2023/4/22)
             }", height=1];
-        dataRaceBasicRulesStack [label="{
-            <note20230424>Rule1: When global variables or static variables are shared among multiple Goroutines(2023/4/24)|
-            <note202304241>Rule2: As long as the program contains malfunction channel(2023/4/24)|
-            <note202304242>Rule3: As long as the program contains malfunction sync mechanism(2023/4/24)|
-            <note202304243>Rule4: As long as the program contains closure(2023/4/24)|
-            <note202304244>Rule5: Reading and writing map or configuration information in multiple Goroutines(2023/4/24)|
-            <note20230426>Rule6: As long as the program accesses interface variables(2023/4/26)|
-            <note20230430>Rule7: When list is shared among multiple Goroutines(2023/4/30)|
-            <note202304301>Rule8: As long as the program contains malfunction timer mechanism(2023/4/30)
-            }", height=1];
-        dataRaceComplicatedRulesStack [label="{
-            <note20230420>select race examples(2023/4/20)
+        dataRaceRulesStack [label="{
+            <note20230424>Rule1: goroutines rule(2023/4/24)|
+            <note202304241>Rule2: sync rule(2023/4/24)|
+            <note202304242>Rule3: sync2 rule(2023/4/24)|
+            <note202304243>Rule4: map rule(2023/4/24)|
+            <note202304244>Rule5: channel rule(2023/4/24)|
+            <note20230426>Rule6: channel2 rule(2023/4/26)|
+            <note20230430>Rule7: timer rule(2023/4/30)|
+            <note202304301>Rule8: timer2 rule(2023/4/30)|
+            <note20230501>Rule9: select rule(2023/5/1)|
+            <note202305011>Rule10: interface rule(2023/5/1)|
+            <note20230502>Rule11: closure rule(2023/5/2)|
+            <note202305021>Rule11: closure rule(2023/5/2)|
+            <note20230508>Rule12: closure rule(2023/5/8)
             }", height=1];
     }
-    
-    golangExplainStack:note20230420 -> dataRaceBasicRulesStack [penwidth=2];
-    golangExplainStack:note202304201 -> dataRaceComplicatedRulesStack [penwidth=2];
-    golangExplainStack:note20230421 -> memoryBarrieStack [penwidth=2];
+
+    golangExplainedzImageNode -> dataRaceRulesStackImageNode  [penwidth=3,color=pink,arrowhead=dot];
+    dataRaceRulesStackImageNode -> dataRaceRulesStack [penwidth=3,color=pink];
+    golangExplainStack:note20230420 -> dataRaceRulesStack [penwidth=3];
+    golangExplainStack:note20230421 -> memoryBarrieStack [penwidth=3];
 /*end*/}

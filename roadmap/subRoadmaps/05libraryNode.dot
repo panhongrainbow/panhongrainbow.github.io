@@ -3,8 +3,8 @@ digraph SubRoadmap {
     subgraph cluster_tickerz {
         label="tickerz";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         tickerzStack [label="{
             <note20230404>base refactors the code and adds new comments(2023/4/4)|
             <note20230407>base splits the CheckOpts function into smaller functions(2023/4/7)|
@@ -16,8 +16,8 @@ digraph SubRoadmap {
     subgraph cluster_filebasez {
         label="filebasez";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         filebasezStack [label="{
             <note20230327>create any shared memory segments(2023/3/27)|
             <note20230329>release v0.0.1(2023/3/29)|
@@ -31,8 +31,8 @@ digraph SubRoadmap {
     subgraph cluster_tracez {
         label="tracez";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         tracezStack [label="{
             <note20230418>opentelemetry file connection experiment(2023/4/18)|
             <note202304181>opentelemetry experiment with MongoDB connection(2023/4/18)|
@@ -44,12 +44,12 @@ digraph SubRoadmap {
     subgraph cluster_tracez_pass_depth {
         label="tracezPassDepth";
         style=rounded;
-        penwidth=2;
-        node [style=filled, penwidth=2, fillcolor="#FFFF77"];
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         tracezPassDepthStack [label="{
             <note20230503>use atomic value to deal with data race problem and create index at the same time(2023/5/3)
             }", height=1];
     }
-    tracezStack:note20230503 -> strategy20230503ImageNode [penwidth=2];
-    strategy20230503ImageNode -> tracezPassDepthStack:note20230503 [penwidth=2];
+    tracezStack:note20230503 -> strategy20230503ImageNode [penwidth=3];
+    strategy20230503ImageNode -> tracezPassDepthStack:note20230503 [penwidth=3];
 /*end*/}
