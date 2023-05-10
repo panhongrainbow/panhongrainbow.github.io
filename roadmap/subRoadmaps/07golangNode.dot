@@ -37,8 +37,8 @@ digraph SubRoadmap {
             }", height=1];
     }
 
-    golangExplainedzImageNode -> dataRaceRulesStackImageNode  [penwidth=3,color=pink,arrowhead=dot];
-    dataRaceRulesStackImageNode -> dataRaceRulesStack [penwidth=3,color=pink];
+    golangExplainedzImageNode -> dataRaceRulesStackImageNode  [penwidth=3,arrowhead=dot];
+    dataRaceRulesStackImageNode -> dataRaceRulesStack [penwidth=3];
     golangExplainStack:note20230420 -> dataRaceRulesStack [penwidth=3];
     golangExplainStack:note20230421 -> memoryBarrieStack [penwidth=3];
 /*end*/}

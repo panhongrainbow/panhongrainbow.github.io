@@ -20,4 +20,5 @@ digraph SubRoadmap {
 
     strategy20230503ImageNode [label="<strategy>", image="assets/strategy.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     strategy20230504ImageNode [label="<strategy>", image="assets/strategy.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    strategy20230510ImageNode [label="<strategy>", image="assets/strategy.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
 /*end*/}

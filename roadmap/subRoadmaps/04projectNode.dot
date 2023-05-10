@@ -15,7 +15,6 @@ digraph SubRoadmap {
             }", height=1];
     }
 
-
     subgraph cluster_problems_discovered {
         label="assemble project";
         style=rounded;
