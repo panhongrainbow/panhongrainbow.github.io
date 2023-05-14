@@ -44,8 +44,9 @@ digraph SubRoadmap {
         penwidth=3;
         node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         netInsightsExplainStack [label="{
-            <note20230416>discuss the interaction between C language and Golang net functions(2023/4/16)|
-            <note20230417>use strace to trace the socket function to find the link to glibc(2023/4/17)
+            <note20230512>multiplexer 😁(2023/5/12)|
+            <note20230416>discuss the interaction between C language and Golang net functions 😆(2023/4/16)|
+            <note20230417>use strace to trace the socket function to find the link to glibc 😇(2023/4/17)
             }", height=1];
     }
 /*end*/}
