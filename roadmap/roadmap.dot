@@ -35,6 +35,7 @@ digraph SubRoadmap {
     strategy20230503ImageNode [label="<strategy>", image="assets/strategy.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     strategy20230504ImageNode [label="<strategy>", image="assets/strategy.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     strategy20230510ImageNode [label="<strategy>", image="assets/strategy.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    strategy20230516ImageNode [label="<strategy>", image="assets/strategy.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
 
     // (4) project node
     node [shape=record, fontname="Courier New"];
@@ -124,8 +125,20 @@ digraph SubRoadmap {
             }", height=1];
     }
 
+    subgraph cluster_unsafe_hack {
+    label="unsafeHack";
+    style=rounded;
+    penwidth=3;
+    node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
+    unsafeHackStack [label="{
+            <note20230516>even if functions with unsafe pointers were locked, they were still much faster than string functions 👹(2023/5/16)
+            }", height=1];
+    }
+
     tracezStack:note202305101 -> strategy20230510ImageNode [penwidth=3];
     strategy20230510ImageNode -> delayTimeEstimateStack:note20230510 [penwidth=3];
+    tracezStack:note20230515 -> strategy20230516ImageNode [penwidth=3];
+    strategy20230516ImageNode -> delayTimeEstimateStack:note20230510 [penwidth=3];
 
     subgraph cluster_tracez_pass_depth {
         label="tracezPassDepth";
@@ -133,7 +146,8 @@ digraph SubRoadmap {
         penwidth=3;
         node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
         tracezPassDepthStack [label="{
-            <note20230503>my way to enforce OpenTelemetry 🙄(2023/5/3)
+            <note20230503>my way to enforce OpenTelemetry 🙄(2023/5/3)|
+            <note20230515>hack the performance of compressed data 👹(2023/5/15)
             }", height=1];
     }
     tracezStack:note20230503 -> strategy20230503ImageNode [penwidth=3];
@@ -225,11 +239,13 @@ digraph SubRoadmap {
             <rule11>Rule11: closure rule(2023/5/8)|
             <rule12>Rule12: list rule(2023/5/8)|
             <rule13>Rule13: iocopy rule(2023/5/8)|
-            <rule15>Rule15: active rule 😓(2023/5/11)
+            <rule15>Rule15: active rule 😓(2023/5/11)|
+            <rule16>Rule16: atomic rule 👹(2023/5/16)
             }", height=1];
     }
     // feedback
     tickerzStack:note20230511 -> dataRaceRulesStack:rule15 [penwidth=3,color=purple];
+    tracezStack:note20230515 -> dataRaceRulesStack:rule16 [penwidth=3,color=purple];
 
     // inner node
     golangExplainedzImageNode -> dataRaceRulesStackImageNode  [penwidth=3,arrowhead=dot];
