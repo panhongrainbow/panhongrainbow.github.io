@@ -42,7 +42,8 @@ digraph SubRoadmap {
             <note20230503>use baggage to deal with data race problem(2023/5/3)|
             <note20230510>create a search function to find tracing data in MongoDB 🏋(2023/5/10)|
             <note202305101>the application of opentelemetry 🙄(2023/5/10)|
-            <note20230515>create a search function to find tracing data in file 🏋(2023/5/15)
+            <note20230515>create a search function for MongoDB client to find tracing data in file 🏋(2023/5/15)|
+            <note20230516>hack the performance of compressed data 👹(2023/5/16)
             }", height=1];
     }
 
@@ -69,7 +70,7 @@ digraph SubRoadmap {
     tracezStack:note202305101 -> strategy20230510ImageNode [penwidth=3];
     strategy20230510ImageNode -> delayTimeEstimateStack:note20230510 [penwidth=3];
     tracezStack:note20230515 -> strategy20230516ImageNode [penwidth=3];
-    strategy20230516ImageNode -> delayTimeEstimateStack:note20230510 [penwidth=3];
+    strategy20230516ImageNode -> unsafeHackStack:note20230516 [penwidth=3];
 
     subgraph cluster_tracez_pass_depth {
         label="tracezPassDepth";
@@ -77,8 +78,7 @@ digraph SubRoadmap {
         penwidth=3;
         node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
         tracezPassDepthStack [label="{
-            <note20230503>my way to enforce OpenTelemetry 🙄(2023/5/3)|
-            <note20230515>hack the performance of compressed data 👹(2023/5/15)
+            <note20230503>my way to enforce OpenTelemetry 🙄(2023/5/3)
             }", height=1];
     }
     tracezStack:note20230503 -> strategy20230503ImageNode [penwidth=3];
