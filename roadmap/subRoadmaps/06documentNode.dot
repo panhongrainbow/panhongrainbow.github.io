@@ -46,7 +46,9 @@ digraph SubRoadmap {
         netInsightsExplainStack [label="{
             <note20230512>multiplexer 😁(2023/5/12)|
             <note20230416>discuss the interaction between C language and Golang net functions 😆(2023/4/16)|
-            <note20230417>use strace to trace the socket function to find the link to glibc 😇(2023/4/17)
+            <note20230417>use strace to trace the socket function to find the link to glibc 😇(2023/4/17)|
+            <note20230512>discusses the networking model of golang (multiplexers and goroutine leak) 😱(2023/5/12)|
+            <note20230518>troubleshoots a golang  multiplexer (because of ip6tables) 🥵(2023/5/18)
             }", height=1];
     }
 /*end*/}

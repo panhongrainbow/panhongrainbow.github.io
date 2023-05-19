@@ -112,9 +112,29 @@ digraph SubRoadmap {
             <note20230510>create a search function to find tracing data in MongoDB 🏋(2023/5/10)|
             <note202305101>the application of opentelemetry 🙄(2023/5/10)|
             <note20230515>create a search function for MongoDB client to find tracing data in file 🏋(2023/5/15)|
-            <note20230516>hack the performance of compressed data 👹(2023/5/16)
+            <note20230516>hack the performance of compressed data 👹(2023/5/16)|
+            <note20230518>decide to use LRU to arrange tracing data 🤫(2023/5/18)
+            }", height=1];
+        tracingLruStandardStack [label="{
+            <tracingTest01>generate test relations for Standard test data 😶(2023/5/18)|
+            <tracingTest02>generate test raw data for Standard test data 😶(2023/5/19)|
+            <tracingTest03>generate test root node, generate LRU data for Standard test data 😶(2023/5/19)
+            }", height=1];
+        tracingLruRecursiveStack [label="{
+            <tracingTest04>generate test relations for Recursive test data 😶(2023/5/?)|
+            <tracingTest05>generate test raw data for Recursive test data 😶(2023/5/?)|
+            <tracingTest06>generate test root node, generate LRU data for Recursive test data 😶(2023/5/?)
+            }", height=1];
+        tracingLruGoRoutineStack [label="{
+            <tracingTest07>generate test relations for Goroutine test data 😶(2023/5/?)|
+            <tracingTest08>generate test raw data for Goroutine test data 😶(2023/5/?)|
+            <tracingTest09>generate test root node, generate LRU data for Goroutine test data 😶(2023/5/?)
             }", height=1];
     }
+
+    tracezStack:note20230518 -> tracingLruStandardStack [penwidth=3];
+    tracezStack:note20230518 -> tracingLruRecursiveStack [penwidth=3];
+    tracezStack:note20230518 -> tracingLruGoRoutineStack [penwidth=3];
 
     subgraph cluster_delayTime_estimate {
         label="delayTimeEstimate";
@@ -127,11 +147,11 @@ digraph SubRoadmap {
     }
 
     subgraph cluster_unsafe_hack {
-    label="unsafeHack";
-    style=rounded;
-    penwidth=3;
-    node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
-    unsafeHackStack [label="{
+        label="unsafeHack";
+        style=rounded;
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
+        unsafeHackStack [label="{
             <note20230516>even if functions with unsafe pointers were locked, they were still much faster than string functions 👹(2023/5/16)
             }", height=1];
     }
@@ -200,7 +220,9 @@ digraph SubRoadmap {
         netInsightsExplainStack [label="{
             <note20230512>multiplexer 😁(2023/5/12)|
             <note20230416>discuss the interaction between C language and Golang net functions 😆(2023/4/16)|
-            <note20230417>use strace to trace the socket function to find the link to glibc 😇(2023/4/17)
+            <note20230417>use strace to trace the socket function to find the link to glibc 😇(2023/4/17)|
+            <note20230512>discusses the networking model of golang (multiplexers and goroutine leak) 😱(2023/5/12)|
+            <note20230518>troubleshoots a golang  multiplexer (because of ip6tables) 🥵(2023/5/18)
             }", height=1];
     }
 
