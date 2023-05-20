@@ -264,6 +264,9 @@ digraph SubRoadmap {
             <rule15>Rule15: active rule 😓(2023/5/11)|
             <rule16>Rule16: unsafe rule 👹(2023/5/16)
             }", height=1];
+        assemblyStack [label="{
+            <note20230519>explain the inaccuracy of disassembly 🤪(2023/5/19)
+            }", height=1];
     }
     // feedback
     tickerzStack:note20230511 -> dataRaceRulesStack:rule15 [penwidth=3,color=purple];
@@ -271,8 +274,8 @@ digraph SubRoadmap {
 
     // inner node
     golangExplainedzImageNode -> dataRaceRulesStackImageNode  [penwidth=3,arrowhead=dot];
+    golangExplainedzImageNode -> assemblyStack [penwidth=3];
     dataRaceRulesStackImageNode -> dataRaceRulesStack [penwidth=3];
-    golangExplainStack:note20230420 -> dataRaceRulesStack [penwidth=3];
     golangExplainStack:note20230421 -> memoryBarrieStack [penwidth=3];
 
     // (8) other node
