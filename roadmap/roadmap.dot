@@ -241,7 +241,8 @@ digraph SubRoadmap {
             <note202304201>basic examples of data race(2023/4/20)|
             <note20230421>memory barrier(2023/4/21)|
             <note20230424>confirm if the Linux distribution supports golang atomic(2023/4/24)|
-            <note20230502>confirm the features of the context(2023/5/2)
+            <note20230502>confirm the features of the context(2023/5/2)|
+            <note20230511>add an assembly language exampele 🤪(2023/5/11)
             }", height=1];
         memoryBarrieStack [label="{
             <note20230421>understand memory barriers and use objdump to find memory barriers(2023/4/21)|
@@ -273,9 +274,9 @@ digraph SubRoadmap {
     unsafeHackStack:note20230516 -> dataRaceRulesStack:rule16 [penwidth=3,color=purple];
 
     // inner node
-    golangExplainedzImageNode -> dataRaceRulesStackImageNode  [penwidth=3,arrowhead=dot];
-    golangExplainedzImageNode -> assemblyStack [penwidth=3];
-    dataRaceRulesStackImageNode -> dataRaceRulesStack [penwidth=3];
+    golangExplainedzImageNode -> dataRaceRulesStackImageNode  [penwidth=3,arrowhead=dot,weight=200];
+    golangExplainStack:note20230511 -> assemblyStack:note20230519 [penwidth=3];
+    dataRaceRulesStackImageNode -> dataRaceRulesStack [penwidth=3,weight=200];
     golangExplainStack:note20230421 -> memoryBarrieStack [penwidth=3];
 
     // (8) other node
