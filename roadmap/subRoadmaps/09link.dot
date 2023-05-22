@@ -36,7 +36,7 @@ digraph SubRoadmap {
     designPatternsExplainedzImageNode -> mongodbPatternStack [penwidth=3];
     netInsightsExplainedzImageNode -> netInsightsExplainStack [penwidth=3];
 
-    golangExplainedzImageNode -> golangExplainStack [penwidth=3];
+    golangExplainedzImageNode -> golangExplainStack [penwidth=3,weight=500];
 
     middleExplainedzImageNode -> middleExplainStack [penwidth=3];
     abstractionExplainedzImageNode -> abstractionExplainStack [penwidth=3];
