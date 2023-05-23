@@ -19,7 +19,8 @@ digraph SubRoadmap {
         abstractionExplainStack [label="{
             <note20230415>test the normal distribution of statistics 😵(2023/4/15)|
             <note20230423>use a less realistic pinball game to simulate a normal distribution 😵‍(2023/4/23)|
-            <note20230430>use a more realistic pinball game to simulate a normal distribution 🤓(2023/4/30)
+            <note20230430>use a more realistic pinball game to simulate a normal distribution 🤓(2023/4/30)|
+            <note20230523>ziggurat algorithm 🥵(2023/5/23)
             }", height=1];
     }
     
