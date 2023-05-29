@@ -38,7 +38,7 @@ digraph SubRoadmap {
 
     golangExplainedzImageNode -> golangExplainStack [penwidth=3,weight=500];
 
-    middleExplainedzImageNode -> middleExplainStack [penwidth=3];
+    middleExplainedzImageNode -> kafkaExplainStack [penwidth=3];
     abstractionExplainedzImageNode -> abstractionExplainStack [penwidth=3];
     toolsExplainedzImageNode -> toolsExplainStack [penwidth=3];
 

@@ -5,9 +5,12 @@ digraph SubRoadmap {
         style=rounded;
         penwidth=3;
         node [style=filled, penwidth=3, fillcolor="#FFFF77"];
-        middleExplainStack [label="{
+        kafkaExplainStack [label="{
             <note20230514>kafka's iptables rules 😞(2023/5/14)|
             <note20230515>kafka's Range Partitioning strategy as default 🤮(2023/5/15)
+            }", height=1];
+        redisExplainStack [label="{
+            <note20230522>criticize reids cluster in k8s 🤬(2023/5/22)
             }", height=1];
     }
     
@@ -20,7 +23,7 @@ digraph SubRoadmap {
             <note20230415>test the normal distribution of statistics 😵(2023/4/15)|
             <note20230423>use a less realistic pinball game to simulate a normal distribution 😵‍(2023/4/23)|
             <note20230430>use a more realistic pinball game to simulate a normal distribution 🤓(2023/4/30)|
-            <note20230523>ziggurat algorithm 🥵(2023/5/23)
+            <note20230523>ziggurat algorithm 🥵(2023/5/23-2023/5/25)
             }", height=1];
     }
     
