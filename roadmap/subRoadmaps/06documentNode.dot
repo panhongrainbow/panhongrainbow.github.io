@@ -22,8 +22,8 @@ digraph SubRoadmap {
             <note20230504>consider to simulate 2-3 tree with slices and actively balance the 2-3 tree(2023/5/4)
             }", height=1];
     }
-    algorithmExplainStack:note20230501 -> strategy20230504ImageNode [penwidth=3];
-    strategy20230504ImageNode -> slice223treeStack:note20230504 [penwidth=3];
+    algorithmExplainStack:note20230501 -> strategy20230504ImageNode [penwidth=3,color=blue];
+    strategy20230504ImageNode -> slice223treeStack:note20230504 [penwidth=3,color=blue];
 
     subgraph cluster_mongodb_pattern {
         label="mongodb pattern";

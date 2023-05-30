@@ -47,7 +47,9 @@ digraph SubRoadmap {
             <note20230522>generate test data dynamically ✌️(2023/5/22)|
             <note20230518>decide to use LRU to arrange tracing data 🤫(2023/5/18)|
             <note20230527>correct TracingData to record errors and parameter changes 😏(2023/5/27)|
-            <note20230528>prepare to add event descriptions for errors 😏(2023/5/28)
+            <note20230528>prepare to add event descriptions for errors 😏(2023/5/28)|
+            <note20230529>improve the performance of TracingData by using omitempty 👺.(2023/5/29)|
+            <note20230530>start detailed implementation ‍😵‍.(2023/5/30)
             }", height=1];
         tracingLruStandardStack [label="{
             <tracingTest01>generate test relations for Standard test data 😶(2023/5/18)|
@@ -66,9 +68,9 @@ digraph SubRoadmap {
             }", height=1];
     }
 
-    tracezStack:note20230518 -> tracingLruStandardStack [penwidth=3];
-    tracezStack:note20230518 -> tracingLruRecursiveStack [penwidth=3];
-    tracezStack:note20230518 -> tracingLruGoRoutineStack [penwidth=3];
+    tracezStack -> tracingLruStandardStack [penwidth=3];
+    tracezStack -> tracingLruRecursiveStack [penwidth=3];
+    tracezStack -> tracingLruGoRoutineStack [penwidth=3];
 
     subgraph cluster_delayTime_estimate {
         label="delayTimeEstimate";
@@ -76,7 +78,7 @@ digraph SubRoadmap {
         penwidth=3;
         node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
         delayTimeEstimateStack [label="{
-            <note20230510>The application in throughput 🙄(2023/5/10)
+            <note20230510>the application in throughput 🙄(2023/5/10)
             }", height=1];
     }
 
@@ -90,10 +92,10 @@ digraph SubRoadmap {
             }", height=1];
     }
 
-    tracezStack:note202305101 -> strategy20230510ImageNode [penwidth=3];
-    strategy20230510ImageNode -> delayTimeEstimateStack:note20230510 [penwidth=3];
-    tracezStack:note20230515 -> strategy20230516ImageNode [penwidth=3];
-    strategy20230516ImageNode -> unsafeHackStack:note20230516 [penwidth=3];
+    tracezStack:note202305101 -> strategy20230510ImageNode [penwidth=3,color=blue];
+    strategy20230510ImageNode -> delayTimeEstimateStack:note20230510 [penwidth=3,color=blue];
+    tracezStack:note20230515 -> strategy20230516ImageNode [penwidth=3,color=blue];
+    strategy20230516ImageNode -> unsafeHackStack:note20230516 [penwidth=3,color=blue];
 
     subgraph cluster_tracez_pass_depth {
         label="tracezPassDepth";
@@ -104,6 +106,6 @@ digraph SubRoadmap {
             <note20230503>my way to enforce OpenTelemetry 🙄(2023/5/3)
             }", height=1];
     }
-    tracezStack:note20230503 -> strategy20230503ImageNode [penwidth=3];
-    strategy20230503ImageNode -> tracezPassDepthStack:note20230503 [penwidth=3];
+    tracezStack:note20230503 -> strategy20230503ImageNode [penwidth=3,color=blue,color=blue];
+    strategy20230503ImageNode -> tracezPassDepthStack:note20230503 [penwidth=3,color=blue,color=blue];
 /*end*/}
