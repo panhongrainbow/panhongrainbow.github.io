@@ -12,6 +12,10 @@ digraph SubRoadmap {
         redisExplainStack [label="{
             <note20230522>criticize reids cluster in k8s 🤬(2023/5/22)
             }", height=1];
+        mysqlExplainStack [label="{
+            <note20230601>explain the variable lifecycle within a Stored Procedure ☹️(2023/6/1)|
+            <note20230531>craete an array within a Stored Procedure 😣(2023/5/31)
+            }", height=1];
     }
     
     subgraph cluster_abstraction_explain {
