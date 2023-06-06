@@ -117,7 +117,8 @@ digraph SubRoadmap {
             <note20230518>decide to use LRU to arrange tracing data 🤫(2023/5/18)|
             <note20230527>correct TracingData to record errors and parameter changes 😏(2023/5/27)|
             <note20230528>prepare to add event descriptions for errors 😏(2023/5/28)|
-            <note20230529>improve the performance of TracingData by using omitempty 👺.(2023/5/29)|
+            <note20230529>improve the performance of TracingData by using omitempty 👺(2023/5/29)|
+            <note20230606>enhance the performance by using my own Unmarshal 🤕(2023/6/6)|
             <note20230530>start detailed implementation ‍😵‍.(2023/5/30)
             }", height=1];
         tracingLruStandardStack [label="{
@@ -269,6 +270,10 @@ digraph SubRoadmap {
             <rule13>Rule13: iocopy rule(2023/5/8)|
             <rule15>Rule15: active rule 😓(2023/5/11)|
             <rule16>Rule16: unsafe rule 👹(2023/5/16)
+            }", height=1];
+        gcStack [label="{
+            <note20230605>build an Unmarshal function to increase the performance of JSON string processing 🤕(2023/6/5)|
+            <note20230606>build a simple parser to increase the performance of JSON string processing 😵(2023/6/6)
             }", height=1];
         pprofTestStack [label="{
             <note20230602> integrate PPROF into unit test 😗(2023/6/2)

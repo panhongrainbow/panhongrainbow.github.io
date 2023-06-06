@@ -38,6 +38,10 @@ digraph SubRoadmap {
             <rule15>Rule15: active rule 😓(2023/5/11)|
             <rule16>Rule16: unsafe rule 👹(2023/5/16)
             }", height=1];
+        gcStack [label="{
+            <note20230605>build an Unmarshal function to increase the performance of JSON string processing 🤕(2023/6/5)|
+            <note20230606>build a simple parser to increase the performance of JSON string processing 😵(2023/6/6)
+            }", height=1];
         pprofTestStack [label="{
             <note20230602> integrate PPROF into unit test 😗(2023/6/2)
             }", height=1];

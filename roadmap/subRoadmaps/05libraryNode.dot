@@ -48,7 +48,8 @@ digraph SubRoadmap {
             <note20230518>decide to use LRU to arrange tracing data 🤫(2023/5/18)|
             <note20230527>correct TracingData to record errors and parameter changes 😏(2023/5/27)|
             <note20230528>prepare to add event descriptions for errors 😏(2023/5/28)|
-            <note20230529>improve the performance of TracingData by using omitempty 👺.(2023/5/29)|
+            <note20230529>improve the performance of TracingData by using omitempty 👺(2023/5/29)|
+            <note20230606>enhance the performance by using my own Unmarshal 🤕(2023/6/6)|
             <note20230530>start detailed implementation ‍😵‍.(2023/5/30)
             }", height=1];
         tracingLruStandardStack [label="{
