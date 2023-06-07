@@ -205,11 +205,14 @@ digraph SubRoadmap {
     algorithmExplainStack:note20230501 -> strategy20230504ImageNode [penwidth=3,color=blue];
     strategy20230504ImageNode -> slice223treeStack:note20230504 [penwidth=3,color=blue];
 
-    subgraph cluster_mongodb_pattern {
-        label="mongodb pattern";
+    subgraph cluster_design_pattern {
+        label="design pattern";
         style=rounded;
         penwidth=3;
         node [style=filled, penwidth=3, fillcolor="#FFFF77"];
+        microServerStack [label="{
+            <note20230607>explain what MicroServices is 🤔(2023/6/7)
+            }", height=1];
         mongodbPatternStack [label="{
             <note20230408>omitempty(2023/4/8)|
             <note20230401>polymorphic(2023/4/1)|
