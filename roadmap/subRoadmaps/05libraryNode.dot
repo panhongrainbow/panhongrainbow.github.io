@@ -109,4 +109,14 @@ digraph SubRoadmap {
     }
     tracezStack:note20230503 -> strategy20230503ImageNode [penwidth=3,color=blue,color=blue];
     strategy20230503ImageNode -> tracezPassDepthStack:note20230503 [penwidth=3,color=blue,color=blue];
+
+    subgraph cluster_consensusLockz {
+        label="consensusLockz";
+        style=rounded;
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
+        consensusLockzStack [label="{
+            <note20230608>explain why I choose Consus 😁(2023/6/8)
+            }", height=1];
+    }
 /*end*/}

@@ -8,6 +8,7 @@ digraph SubRoadmap {
     LiHuaImageNode -> tickerzImageNode [penwidth=3,arrowhead=dot];
     LiHuaImageNode -> filebasezImageNode [penwidth=3,arrowhead=dot];
     LiHuaImageNode -> tracezImageNode [penwidth=3,arrowhead=dot];
+    LiHuaImageNode -> consensusLockzImageNode [penwidth=3,arrowhead=dot];
 
     LiHuaImageNode -> algorithmExplainedzImageNode [penwidth=3,arrowhead=dot];
     LiHuaImageNode -> designPatternsExplainedzImageNode [penwidth=3,arrowhead=dot];
@@ -31,6 +32,7 @@ digraph SubRoadmap {
     tickerzImageNode -> tickerzStack [penwidth=3];
     filebasezImageNode -> filebasezStack [penwidth=3];
     tracezImageNode -> tracezStack [penwidth=3];
+    consensusLockzImageNode -> consensusLockzStack [penwidth=3];
 
     algorithmExplainedzImageNode -> algorithmExplainStack [penwidth=3];
     designPatternsExplainedzImageNode -> mongodbPatternStack [penwidth=3];

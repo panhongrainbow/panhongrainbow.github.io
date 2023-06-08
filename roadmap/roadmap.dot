@@ -19,6 +19,7 @@ digraph SubRoadmap {
     filebasezImageNode [label="<filebasez>", image="assets/filebasez.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     tracezImageNode [label="<tracez>", image="assets/tracez.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     projectImageNode [label="<project>", image="assets/project.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    consensusLockzImageNode [label="<consensusLockz>", image="assets/consensusLockz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     designPatternsExplainedzImageNode [label="<designPatternsExplainedz>", image="assets/designPatternsExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     algorithmExplainedzImageNode [label="<algorithmExplainedz>", image="assets/algorithmExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     golangExplainedzImageNode [label="<golangExplainedz>", image="assets/golangExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
@@ -179,6 +180,16 @@ digraph SubRoadmap {
     tracezStack:note20230503 -> strategy20230503ImageNode [penwidth=3,color=blue,color=blue];
     strategy20230503ImageNode -> tracezPassDepthStack:note20230503 [penwidth=3,color=blue,color=blue];
 
+    subgraph cluster_consensusLockz {
+        label="consensusLockz";
+        style=rounded;
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
+        consensusLockzStack [label="{
+            <note20230608>explain why I choose Consus 😁(2023/6/8)
+            }", height=1];
+    }
+
     // (6) document node
     subgraph cluster_algorithm_explain {
         label="algorithmExplainedz";
@@ -320,12 +331,22 @@ digraph SubRoadmap {
         penwidth=3;
         node [style=filled, penwidth=3, fillcolor="#FFFF77"];
         abstractionExplainStack [label="{
+            <note20230415>new subject Statistic 😵(2023/4/15)|
+            <note20230609>new subject Conflict 😵(2023/6/9)
+            }", height=1];
+        statisticStack [label="{
             <note20230415>test the normal distribution of statistics 😵(2023/4/15)|
             <note20230423>use a less realistic pinball game to simulate a normal distribution 😵‍(2023/4/23)|
             <note20230430>use a more realistic pinball game to simulate a normal distribution 🤓(2023/4/30)|
             <note20230523>ziggurat algorithm 🥵(2023/5/23-2023/5/25)
             }", height=1];
+        conflictStack [label="{
+            <note20230609>The difference between nominal loss ratio and actual loss ratio 😛(2023/6/9)
+            }", height=1];
     }
+
+    abstractionExplainStack:note20230415 -> statisticStack  [penwidth=3];
+    abstractionExplainStack:note20230609 -> conflictStack [penwidth=3];
     
     subgraph cluster_tools_explain {
         label="toolsExplainedz";
@@ -350,6 +371,7 @@ digraph SubRoadmap {
     LiHuaImageNode -> tickerzImageNode [penwidth=3,arrowhead=dot];
     LiHuaImageNode -> filebasezImageNode [penwidth=3,arrowhead=dot];
     LiHuaImageNode -> tracezImageNode [penwidth=3,arrowhead=dot];
+    LiHuaImageNode -> consensusLockzImageNode [penwidth=3,arrowhead=dot];
 
     LiHuaImageNode -> algorithmExplainedzImageNode [penwidth=3,arrowhead=dot];
     LiHuaImageNode -> designPatternsExplainedzImageNode [penwidth=3,arrowhead=dot];
@@ -373,6 +395,7 @@ digraph SubRoadmap {
     tickerzImageNode -> tickerzStack [penwidth=3];
     filebasezImageNode -> filebasezStack [penwidth=3];
     tracezImageNode -> tracezStack [penwidth=3];
+    consensusLockzImageNode -> consensusLockzStack [penwidth=3];
 
     algorithmExplainedzImageNode -> algorithmExplainStack [penwidth=3];
     designPatternsExplainedzImageNode -> mongodbPatternStack [penwidth=3];

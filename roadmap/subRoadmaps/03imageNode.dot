@@ -5,6 +5,7 @@ digraph SubRoadmap {
     filebasezImageNode [label="<filebasez>", image="assets/filebasez.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     tracezImageNode [label="<tracez>", image="assets/tracez.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     projectImageNode [label="<project>", image="assets/project.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    consensusLockzImageNode [label="<consensusLockz>", image="assets/consensusLockz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     designPatternsExplainedzImageNode [label="<designPatternsExplainedz>", image="assets/designPatternsExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     algorithmExplainedzImageNode [label="<algorithmExplainedz>", image="assets/algorithmExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     golangExplainedzImageNode [label="<golangExplainedz>", image="assets/golangExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
