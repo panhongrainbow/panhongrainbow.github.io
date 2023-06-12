@@ -46,7 +46,8 @@ digraph SubRoadmap {
             <note20230602> integrate PPROF into unit test 😗(2023/6/2)
             }", height=1];
         assemblyStack [label="{
-            <note20230519>explain the inaccuracy of disassembly 🤪(2023/5/19)
+            <note20230519>explain the inaccuracy of disassembly 🤪(2023/5/19)|
+            <note20230612>explain different types of memory barriers 🙈(2023/6/12)
             }", height=1];
     }
     // feedback

@@ -120,6 +120,7 @@ digraph SubRoadmap {
             <note20230528>prepare to add event descriptions for errors 😏(2023/5/28)|
             <note20230529>improve the performance of TracingData by using omitempty 👺(2023/5/29)|
             <note20230606>enhance the performance by using my own Unmarshal 🤕(2023/6/6)|
+            <note20230609>retrieve all attributes from the log 🙂(2023/6/9)|
             <note20230530>start detailed implementation ‍😵‍.(2023/5/30)
             }", height=1];
         tracingLruStandardStack [label="{
@@ -293,7 +294,8 @@ digraph SubRoadmap {
             <note20230602> integrate PPROF into unit test 😗(2023/6/2)
             }", height=1];
         assemblyStack [label="{
-            <note20230519>explain the inaccuracy of disassembly 🤪(2023/5/19)
+            <note20230519>explain the inaccuracy of disassembly 🤪(2023/5/19)|
+            <note20230612>explain different types of memory barriers 🙈(2023/6/12)
             }", height=1];
     }
     // feedback
@@ -341,7 +343,7 @@ digraph SubRoadmap {
             <note20230523>ziggurat algorithm 🥵(2023/5/23-2023/5/25)
             }", height=1];
         conflictStack [label="{
-            <note20230609>The difference between nominal loss ratio and actual loss ratio 😛(2023/6/9)
+            <note20230610>The difference between nominal loss ratio and actual loss ratio 😛(2023/6/12)
             }", height=1];
     }
 
