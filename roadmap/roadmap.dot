@@ -18,6 +18,7 @@ digraph SubRoadmap {
     tickerzImageNode [label="tickerz", image="assets/tickerz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     filebasezImageNode [label="<filebasez>", image="assets/filebasez.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     tracezImageNode [label="<tracez>", image="assets/tracez.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    goResponsezImageNode [label="<goResponsez>", image="assets/goResponsez.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     projectImageNode [label="<project>", image="assets/project.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     consensusLockzImageNode [label="<consensusLockz>", image="assets/consensusLockz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     designPatternsExplainedzImageNode [label="<designPatternsExplainedz>", image="assets/designPatternsExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
@@ -188,9 +189,21 @@ digraph SubRoadmap {
         penwidth=3;
         node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
         consensusLockzStack [label="{
-            <note20230608>explain why I choose Consul 😁(2023/6/8)|
+            <note20230608> explain why I choose Consul 😁(2023/6/8)|
             <note20230612> distributed lock acquisition and release 🙄(2023/6/12)|
             <note20230613> refresh distributed lock timeout period 🙄(2023/6/13)
+            }", height=1];
+    }
+
+    subgraph cluster_goResponsez {
+        label="goResponsez";
+        style=rounded;
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
+        goResponsezStack [label="{
+            <note20230619> create a html template 😲(2023/6/19)|
+            <note20230620> Golang interacts with ajax 😮(2023/6/20)|
+            <note20230621> ajax returns matrix to html 😛(2023/6/21)
             }", height=1];
     }
 
@@ -377,6 +390,7 @@ digraph SubRoadmap {
     LiHuaImageNode -> filebasezImageNode [penwidth=3,arrowhead=dot];
     LiHuaImageNode -> tracezImageNode [penwidth=3,arrowhead=dot];
     LiHuaImageNode -> consensusLockzImageNode [penwidth=3,arrowhead=dot];
+    LiHuaImageNode -> goResponsezImageNode [penwidth=3,arrowhead=dot];
 
     LiHuaImageNode -> algorithmExplainedzImageNode [penwidth=3,arrowhead=dot];
     LiHuaImageNode -> designPatternsExplainedzImageNode [penwidth=3,arrowhead=dot];
@@ -401,6 +415,7 @@ digraph SubRoadmap {
     filebasezImageNode -> filebasezStack [penwidth=3];
     tracezImageNode -> tracezStack [penwidth=3];
     consensusLockzImageNode -> consensusLockzStack [penwidth=3];
+    goResponsezImageNode -> goResponsezStack [penwidth=3];
 
     algorithmExplainedzImageNode -> algorithmExplainStack [penwidth=3];
     designPatternsExplainedzImageNode -> mongodbPatternStack [penwidth=3];

@@ -118,9 +118,21 @@ digraph SubRoadmap {
         penwidth=3;
         node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
         consensusLockzStack [label="{
-            <note20230608>explain why I choose Consul 😁(2023/6/8)|
+            <note20230608> explain why I choose Consul 😁(2023/6/8)|
             <note20230612> distributed lock acquisition and release 🙄(2023/6/12)|
             <note20230613> refresh distributed lock timeout period 🙄(2023/6/13)
+            }", height=1];
+    }
+
+    subgraph cluster_goResponsez {
+        label="goResponsez";
+        style=rounded;
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
+        goResponsezStack [label="{
+            <note20230619> create a html template 😲(2023/6/19)|
+            <note20230620> Golang interacts with ajax 😮(2023/6/20)|
+            <note20230621> ajax returns matrix to html 😛(2023/6/21)
             }", height=1];
     }
 /*end*/}
