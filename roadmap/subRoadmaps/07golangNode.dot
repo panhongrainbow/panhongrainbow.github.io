@@ -5,10 +5,17 @@ digraph SubRoadmap {
         penwidth=3;
         label="golangExplainedz";
         node [style=filled, penwidth=3, fillcolor="#B9EAA0"];
+        golangSubjectStack [label="{
+            Golang Programming Language 🔖|
+            Memory Manager in Golang 🔖|
+            Memory Barriers in Golang 🔖|
+            Data Race Rules in Golang 🔖|
+            Garbage Collection (GC) in Golang 🔖|
+            Profiling with PPROF in Golang 🔖|
+            Assembly in Golang 🔖
+            }", height=1];
         golangExplainStack [label="{
-            <note20230411>explain what heap arena is(2023/4/11)|
             <note20230413>implement a fake interface(2023/4/13)|
-            <note20230414>explain what bitmap is(2023/4/14)|
             <note20230419>prevent data race in multi-core environment(2023/4/19)|
             <note20230420>complicated of about data race(2023/4/20)|
             <note202304201>basic examples of data race(2023/4/20)|
@@ -17,7 +24,11 @@ digraph SubRoadmap {
             <note20230502>confirm the features of the context(2023/5/2)|
             <note20230511>add an assembly language exampele 🤪(2023/5/11)
             }", height=1];
-        memoryBarrieStack [label="{
+        memoryManagerStack [label="{
+            <note20230414>three components: heap, arena bitmap, and mspan 📖 (2023/4/14)|
+            <note20230425>simulate memory allocation in Golang ⚙️ (2023/6/25)
+            }", height=1];
+        memoryBarrierStack [label="{
             <note20230421>understand memory barriers and use objdump to find memory barriers(2023/4/21)|
             <note20230422>confirm that the channel uses memory barriers(2023/4/22)
             }", height=1];
@@ -55,8 +66,16 @@ digraph SubRoadmap {
     unsafeHackStack:note20230516 -> dataRaceRulesStack:rule16 [penwidth=3,color=purple];
 
     // inner node
-    golangExplainedzImageNode -> dataRaceRulesStackImageNode  [penwidth=3,arrowhead=dot,weight=200];
-    golangExplainStack:note20230511 -> assemblyStack:note20230519 [penwidth=3];
-    dataRaceRulesStackImageNode -> dataRaceRulesStack [penwidth=3,weight=200];
-    golangExplainStack:note20230421 -> memoryBarrieStack [penwidth=3];
+    golangSubjectStack -> golangExplainStack [pos="n"];
+    golangSubjectStack -> memoryManagerStack [pos="s"];
+    golangSubjectStack -> memoryBarrierStack [splines=curved];
+    golangSubjectStack -> dataRaceRulesStack [splines=curved];
+    golangSubjectStack -> gcStack [splines=curved];
+    golangSubjectStack -> pprofTestStack [splines=curved];
+    golangSubjectStack -> assemblyStack [splines=curved];
+
+// golangExplainedzImageNode -> dataRaceRulesStackImageNode  [penwidth=3,arrowhead=dot,weight=200];
+    // golangExplainStack:note20230511 -> assemblyStack:note20230519 [penwidth=3];
+    // dataRaceRulesStackImageNode -> dataRaceRulesStack [penwidth=3,weight=200];
+    // golangExplainStack:note20230421 -> memoryBarrieStack [penwidth=3];
 /*end*/}
