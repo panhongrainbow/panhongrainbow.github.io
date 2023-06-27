@@ -31,7 +31,8 @@ digraph SubRoadmap {
             <note20230415>test the normal distribution of statistics 😵(2023/4/15)|
             <note20230423>use a less realistic pinball game to simulate a normal distribution 😵‍(2023/4/23)|
             <note20230430>use a more realistic pinball game to simulate a normal distribution 🤓(2023/4/30)|
-            <note20230523>ziggurat algorithm 🥵(2023/5/23-2023/5/25)
+            <note20230523>ziggurat algorithm 📖(2023/5/23-2023/5/25)|
+            <note20230626>T-Test 📖(2023/6/26-2023/6/28)
             }", height=1];
         conflictStack [label="{
             <note20230610>The difference between nominal loss ratio and actual loss ratio 😛(2023/6/12)
