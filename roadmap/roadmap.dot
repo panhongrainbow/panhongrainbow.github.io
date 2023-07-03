@@ -201,9 +201,10 @@ digraph SubRoadmap {
         penwidth=3;
         node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
         goResponsezStack [label="{
-            <note20230619> create a html template 😲(2023/6/19)|
-            <note20230620> Golang interacts with ajax 😮(2023/6/20)|
-            <note20230621> ajax returns matrix to html 😛(2023/6/21)
+            <note20230619> create a html template 🎨(2023/6/19)|
+            <note20230620> Golang interacts with ajax 🎨(2023/6/20)|
+            <note20230621> ajax returns matrix to html 🎨(2023/6/21)|
+            <note20230622> Use ajax to update the table data on the web page 🎨(2023/6/22)
             }", height=1];
     }
 
