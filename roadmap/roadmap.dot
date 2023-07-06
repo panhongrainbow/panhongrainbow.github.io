@@ -123,7 +123,8 @@ digraph SubRoadmap {
             <note20230606>enhance the performance by using my own Unmarshal 🤕(2023/6/6)|
             <note20230609>retrieve all attributes from the log 🙂(2023/6/9)|
             <note20230614>monitor JSON processing performance changes 😅(2023/6/14)|
-            <note20230530>start detailed implementation ‍😵‍.(2023/5/30)
+            <note20230530>start detailed implementation ‍😵‍.(2023/5/30)|
+            <note20230628>boost the processing of tracing log data 🚀(2023/6/28~2023/7/3)
             }", height=1];
         tracingLruStandardStack [label="{
             <tracingTest01>generate test relations for Standard test data 😶(2023/5/18)|
@@ -323,7 +324,9 @@ digraph SubRoadmap {
             }", height=1];
         assemblyStack [label="{
             <note20230519>explain the inaccuracy of disassembly 🤪(2023/5/19)|
-            <note20230612>explain different types of memory barriers 🙈(2023/6/12)
+            <note20230612>explain different types of memory barriers 🙈(2023/6/12)|
+            <note20230704>write the first assembly language program 🪜(2023/7/4)|
+            <note20230705>know how to use linkname 🪜(2023/7/5)
             }", height=1];
     }
     // feedback

@@ -58,7 +58,9 @@ digraph SubRoadmap {
             }", height=1];
         assemblyStack [label="{
             <note20230519>explain the inaccuracy of disassembly 🤪(2023/5/19)|
-            <note20230612>explain different types of memory barriers 🙈(2023/6/12)
+            <note20230612>explain different types of memory barriers 🙈(2023/6/12)|
+            <note20230704>write the first assembly language program 🪜(2023/7/4)|
+            <note20230705>know how to use linkname 🪜(2023/7/5)
             }", height=1];
     }
     // feedback
