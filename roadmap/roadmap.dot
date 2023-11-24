@@ -1,0 +1,40 @@
+digraph SubRoadmap {
+
+    rankdir=TB;
+    ranksep=2;
+    splines=ortho;
+    # bgcolor="#f0e2e9";
+    node [shape=plaintext];
+    edge [splines=compound,margin=0.3]
+    // node [margin=0.9,shape=plaintext,fontsize=30];
+    // edge [margin=0.9,fontsize=15];
+
+    lihua [label="<start>", image="assets/Li-Hua.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+
+    algorithm [label="<algorithmExplainedz>", image="assets/algorithmExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+
+    lihua -> algorithm [splines=curved];
+
+    node [shape=record, fontname="Courier New"];
+
+    subgraph cluster_bptree {
+        label="bptree";
+        style=rounded;
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#EAA0B5"];
+        cluster_bptree [label="{
+            <note20231001>bptree project(2023/10/01)
+            }", height=1];
+        bptree_insert_stack [label="{
+            <note20231123>insert items(2023/11/23)
+            }", height=1];
+        bptree_delete_stack [label="{
+            <note20231124>delete items(2023/11/24)
+            }", height=1];
+    }
+
+    cluster_bptree -> bptree_insert_stack [splines=curved];
+    cluster_bptree -> bptree_delete_stack [splines=curved];
+
+    algorithm -> cluster_bptree [splines=curved];
+}
