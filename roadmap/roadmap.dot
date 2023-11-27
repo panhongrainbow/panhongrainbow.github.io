@@ -12,8 +12,10 @@ digraph SubRoadmap {
     lihua [label="<start>", image="assets/Li-Hua.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
 
     algorithm [label="<algorithmExplainedz>", image="assets/algorithmExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    tool [label="<toolsExplainedz>", image="assets/toolsExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
 
     lihua -> algorithm [splines=curved];
+    lihua -> tool [splines=curved];
 
     node [shape=record, fontname="Courier New"];
 
@@ -37,4 +39,31 @@ digraph SubRoadmap {
     cluster_bptree -> bptree_delete_stack [splines=curved];
 
     algorithm -> cluster_bptree [splines=curved];
+
+
+    node [shape=record, fontname="Courier New"];
+
+    subgraph cluster_tool {
+        label="tool";
+        style=rounded;
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#aaaaff"];
+        cluster_tool [label="{
+            <note20230418>tool project(2023/04/18)
+            }", height=1];
+        git_stack [label="{
+            <note20231125>Adding Git compression and specifications(2023/11/25)
+            }", height=1];
+        device_stack [label="{
+            <note20231126>Organizing applications to a specified route(2023/11/26)
+            }", height=1];
+    }
+
+    cluster_tool -> git_stack [splines=curved];
+    cluster_tool -> device_stack [splines=curved];
+
+    tool -> cluster_tool [splines=curved];
+
+    milestone_20231126 [shape=plaintext, style=filled, fillcolor="#FFFFCC", label="the application can start controlling the routing.程式指定路由"];
+    milestone_20231126 -> cluster_tool [style=dashed, arrowhead=none, color=black, curve=0.5];
 }

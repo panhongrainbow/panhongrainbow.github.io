@@ -1,3 +1,4 @@
 digraph SubRoadmap {
     lihua -> algorithm [splines=curved];
+    lihua -> tool [splines=curved];
 /*end*/}
