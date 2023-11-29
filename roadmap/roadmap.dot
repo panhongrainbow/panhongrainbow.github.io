@@ -12,9 +12,11 @@ digraph SubRoadmap {
     lihua [label="<start>", image="assets/Li-Hua.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
 
     algorithm [label="<algorithmExplainedz>", image="assets/algorithmExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
+    netInsights [label="<netInsightsExplainedz>", image="assets/netInsightsExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
     tool [label="<toolsExplainedz>", image="assets/toolsExplainedz.png", width=0.01, height=0.01, labelloc=b, fontcolor=white, fontname="Helvetica-bold"];
 
     lihua -> algorithm [splines=curved];
+    lihua -> netInsights [splines=curved];
     lihua -> tool [splines=curved];
 
     node [shape=record, fontname="Courier New"];
@@ -43,6 +45,26 @@ digraph SubRoadmap {
 
     node [shape=record, fontname="Courier New"];
 
+    subgraph cluster_netInsights {
+        label="netInsights";
+        style=rounded;
+        penwidth=3;
+        node [style=filled, penwidth=3, fillcolor="#73f596"];
+        cluster_netInsights [label="{
+            <note20230417>netInsights project(2023/4/17)
+            }", height=1];
+        netInsights_http_stack [label="{
+            <note20231128>client round trips(2023/11/28)
+            }", height=1];
+    }
+
+    cluster_netInsights -> netInsights_http_stack [splines=curved];
+
+    netInsights -> cluster_netInsights [splines=curved];
+
+
+    node [shape=record, fontname="Courier New"];
+
     subgraph cluster_tool {
         label="tool";
         style=rounded;
@@ -64,6 +86,6 @@ digraph SubRoadmap {
 
     tool -> cluster_tool [splines=curved];
 
-    milestone_20231126 [shape=plaintext, style=filled, fillcolor="#FFFFCC", label="the application can start controlling the routing.程式指定路由"];
+    milestone_20231126 [shape=plaintext, style=filled, fillcolor="#FFFFCC", label="Any applications can start controlling the routing.程式指定路由"];
     milestone_20231126 -> cluster_tool [style=dashed, arrowhead=none, color=black, curve=0.5];
 }
